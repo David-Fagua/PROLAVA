@@ -2,7 +2,7 @@
  require 'conexion.php';
   
  $Celular = $_POST['Celular'];
- $CAntidad  = $_POST['Cantidad'];
+ $Cantidad  = $_POST['Cantidad'];
  $Piezas = $_POST['Piezas'];
  $Detalle = $_POST['Detalle'];
  $Valor = $_POST['Valor'];

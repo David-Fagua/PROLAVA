@@ -23,7 +23,7 @@
         <div class="form-group">
           <div class="col-md-6">
             <label class="control-label" for="text">Celular</label>
-            <input name="nombre" class="form-control" placeholder="Numero de Celular" type="text">
+            <input name="Celular" class="form-control" placeholder="Numero de Celular" type="text">
             </div>
           </div>
 
