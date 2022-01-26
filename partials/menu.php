@@ -3,11 +3,11 @@
 <br/>
 
 <div>
-  <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #47A5B4;">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #1f3975;">
     <a href="index.php" class="navbar-brand" >
       <img src="assets/icon/Logo.jpg" width="100" height="50" alt="Lavaseco">
     </a>
-    <a href="index.php" class="navbar-brand" style="color: #ffffff;">HOME</a>
+    <a href="index.php" class="navbar-brand" style="color: #b6151e;">HOME</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
