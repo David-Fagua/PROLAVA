@@ -9,7 +9,7 @@
 
 </br>
 
-</--info--/>
+<!--info-->
 
 </--formulario--/>
 
@@ -23,6 +23,8 @@
       <fieldset>
       
         <div class="form-row">
+
+          <!--Corregir o agregar metodo para buscar N_celular y que no se duplique -->
 
           <div class="form-group col-md-2">
             <label class="control-label" for="text">Celular</label>
@@ -52,19 +54,21 @@
 
         <div class="form-row">
 
-          </--Area de texto libre--/>
+          <!--Area de texto libre-->
 
           <div class="form-group col-md-6">
             <label for="validationTextarea">Detalles</label>
             <textarea name="Detalle" class="form-control " id="validationTextarea" placeholder="Describa la prenda"></textarea>
           </div>
 
-          </--Fin de Area de texto libre--/>
+          <!--Fin de Area de texto libre-->
 
           <div class="form-group col-md-3">
             <label class="control-label" for="text">Valor</label>
             <input type="number" name="Valor" class="form-control" placeholder="Valor total">
           </div>
+
+          </--Fecha--/>
 
           <div class="form-group col-md-3">
             <label class="control-label" for="text">Fecha</label>

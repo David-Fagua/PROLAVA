@@ -14,11 +14,15 @@ $insertar = "INSERT INTO factura VALUES ('$Celular',' $N_factura','$Nombre_Clien
 
 $query = mysqli_query($conectar, $insertar);
 
+//--Alerta Correcto--//
+
 if($query){
 
    echo "<script> alert('correcto');
     location.href = '../index.php';
    </script>";
+
+   //--Alerta Incorrecto--//
 
 }else{
     echo "<script> alert('incorrecto');

@@ -3,40 +3,22 @@
 <br/>
 
 <div>
-  <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #1f3975;">
+  <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #021E73;">
     <a href="index.php" class="navbar-brand" >
       <img src="assets/icon/Logo.jpg" width="100" height="50" alt="Lavaseco">
     </a>
-    <a href="index.php" class="navbar-brand" style="color: #b6151e;">HOME</a>
+    <a href="index.php" class="navbar-brand" style="color: #F2E63D;">HOME</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <a href="Catalogo.ph" class="nav-link" style="color: #ffffff;">Catalogo
+
+        <a href="login.php" class="nav-link" style="color: #BF0A19;">HOME
         </a>
-        <a href="index.php" class="nav-link" style="color: #ffffff;">Contactenos
-        </a>
-        <a href="index.php" class="nav-link" style="color: #ffffff;">¿Quienes Somos?
-        </a>
-        <a href="index.php" class="nav-link" style="color: #ffffff;">Misión y Visión
-        </a>
-        <a href="index.php" class="nav-link" style="color: #ffffff;">Portafolio
-        </a>
+  
       </li>
     </ul>
-
-    <ul class="nav navbar-left navbar-top-links">
-        <li class="dropdown navbar-inverse">
-          <div>
-            <button type="button" class="btn btn-link" >
-              <a href="start.php"  >
-                <img src="assets/icon/ingles.png" width="40" height="40" alt="">
-              </a>
-            </button>
-          </div>
-        </li>
-      </ul>
 
     <!--Desplegable-->
 
@@ -48,11 +30,11 @@
                 </a>
           </button>
           <ul class="dropdown-menu dropdown-user">
-            <a class="badge badge-light" class="dropdown-item" href="./vista/login.php">
+            <a class="badge badge-light" class="dropdown-item" href="login.php">
               <img src="assets/icon/1.png" width="25" height="25">
               Iniciar Sesión
             </a>
-            <a class="badge badge-light" class="dropdown-item" href="./vista/Registrar.php">
+            <a class="badge badge-light" class="dropdown-item" href="Registrar.php">
               <img src="assets/icon/5.png" width="25" height="25">
               Registrar
             </a>
