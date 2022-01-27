@@ -17,7 +17,14 @@
                 
   <center>
 
-  <h1>Factura</h1><hr>
+  <h1>
+    Factura
+    <a>
+      <img src="assets/icon/12.png" width="30" height="30">
+    </a>
+  </h1>
+ 
+  <hr>
     <form  method="POST" name="form-work" action="logica/guardar.php">
 
       <fieldset>

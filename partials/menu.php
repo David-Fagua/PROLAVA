@@ -5,9 +5,9 @@
 <div>
   <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #021E73;">
     <a href="index.php" class="navbar-brand" >
-      <img src="assets/icon/Logo.jpg" width="100" height="50" alt="Lavaseco">
+      <img src="assets/icon/Logo.png" width="90" height="40" alt="Lavaseco">
     </a>
-    <a href="index.php" class="navbar-brand" style="color: #F2E63D;">HOME</a>
+    <a href="index.php" class="navbar-brand" style="color: #F2E63D;">LAVASECO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,9 +25,9 @@
     <ul class="nav navbar-left navbar-top-links">
         <li class="dropdown navbar-inverse">
           <button  class="btn btn-link" class="btn btn-sec"  data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-              <a >
-                  <img src="assets/icon/Usuario.png" width="40" height="40">
-                </a>
+            <a >
+              <img src="assets/icon/lava.png" width="40" height="40">
+            </a>
           </button>
           <ul class="dropdown-menu dropdown-user">
             <a class="badge badge-light" class="dropdown-item" href="login.php">
