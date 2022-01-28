@@ -1,29 +1,17 @@
-<?php
-
-    session_start();
-
-    if(!isset($_SESSION['rol'])){
-        header('location: login.php');
-    }else{
-        if($_SESSION['rol'] != 1){
-            header('location: login.php');
-        }
-    }
-
-
-?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-</head>
-<body>
-    <h1>Administrador</h1>
+<html lang="es">
 
-    </--formulario--/>
+<head>
+	<title>Lavaseco Cundinamarca</title>
+
+	<?php include 'partials/head.php';?>
+  <?php include 'partials/menu.php';?>
+
+</br>
+
+<!--info-->
+
+</--formulario--/>
 
 <div id="wrapper" class="container">
                 
@@ -106,5 +94,5 @@
   </center>
 </div>
 
-</body>
-</html>
+<?php include 'partials/menufinal.php';?>
+<?php include 'partials/footer.php';?>

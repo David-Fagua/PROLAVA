@@ -1,29 +1,17 @@
-<?php
-
-    session_start();
-
-    if(!isset($_SESSION['rol'])){
-        header('location: login.php');
-    }else{
-        if($_SESSION['rol'] != 1){
-            header('location: login.php');
-        }
-    }
-
-
-?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-</head>
-<body>
-    <h1>Administrador</h1>
+<html lang="es">
 
-    </--formulario--/>
+<head>
+	<title>Lavaseco Cundinamarca</title>
+
+	<?php include 'partials/head.php';?>
+  <?php include 'partials/menu.php';?>
+
+</br>
+
+<!--info-->
+
+</--formulario--/>
 
 <div id="wrapper" class="container">
                 
@@ -106,5 +94,31 @@
   </center>
 </div>
 
-</body>
-</html>
+<?php
+// Te recomiendo utilizar esta conección, la que utilizas ya no es la recomendada. 
+$link = new PDO('mysql:host=localhost;dbname=hotel', 'root', ''); // el campo vaciío es para la password. 
+
+?>
+
+<table class="table table-striped">
+  	
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>NOMBRE</th>
+			<th>APELLIDO</th>
+			
+		</tr>
+		</thead>
+<?php foreach ($link->query('SELECT * from registros') as $row){ // aca puedes hacer la consulta e iterarla con each. ?> 
+<tr>
+	<td><?php echo $row['id'] // aca te faltaba poner los echo para que se muestre el valor de la variable.  ?></td>
+    <td><?php echo $row['nombre'] ?></td>
+    <td><?php echo $row['apellido'] ?></td>
+ </tr>
+<?php
+	}
+?>
+
+<?php include 'partials/menufinal.php';?>
+<?php include 'partials/footer.php';?>

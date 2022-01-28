@@ -15,7 +15,7 @@
   <div class="col-md-3">
     </div>
     <div class="col-md-6">
-    <form id="loginForm" action="validarCode.php" method="POST" role="form" class="border border-light p-5" style="background-color: #3365A6;">
+    <form id="loginForm" method="POST" role="form" class="border border-light p-5" style="background-color: #3365A6;">
       <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
@@ -28,13 +28,13 @@
               <div class="form-group row">
                 <h2 for="usuario" style="color: #ffffff;" class="col-sm-4 col-form-label">Usuario</h2>
                 <div class="col-sm-8">
-                  <input type="text" name="txtUsuario" class="form-control" id="usuario" autofocus required placeholder="Usuario">
+                  <input type="text" name="username" class="form-control" id="usuario" autofocus required placeholder="Usuario">
                 </div>
               </div>
               <div class="form-group row">
                 <h2 for="Contraseña" style="color: #ffffff;" class="col-sm-4 col-form-label">Contraseña</h2>
                 <div class="col-sm-8">
-                  <input type="password" placeholder="Contraseña" name="txtPassword" class="form-control" required id="password">
+                  <input type="password" name="password" placeholder="Contraseña" class="form-control" required id="password">
                 </div>
               </div>
               <div class="text-center">

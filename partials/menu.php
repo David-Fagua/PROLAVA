@@ -14,8 +14,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <a href="login.php" class="nav-link" style="color: #BF0A19;">HOME
-        </a>
+        <a href="login.php" class="nav-link" style="color: #BF0A19;">HOME</a>
+
+        <a href="Consultar_F.php" class="nav-link" style="color: #ffffff;">Consultar facturas</a>
+
+        <a href="prendas.php" class="nav-link" style="color: #ffffff;">Prendas</a>
+
+        <a href="vista/Error404.php" class="nav-link" style="color: #ffffff;">Proximamente</a>
   
       </li>
     </ul>
