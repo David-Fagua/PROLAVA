@@ -1,32 +1,22 @@
-<?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
-    die();
-}
-
-?>
-
-<!--HTML-->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Admin</title>
+    <title>Ciudades</title>
 
+<?php include 'partials/head.php';?>
 
-<?php include '../partials/headA.php';?>
+<?php include 'partials/menu.php';?>
 
-<?php include '../partials/menuA.php';?>
+<?php 
 
+	$conexion=mysqli_connect('localhost','root','','hsd_plus');
 
-<br>
-<br></br>
+ ?>
 
-<div id="page-wrapper">
+</br>
+</br>
+
+<br></br> 
 
 <!--info--> 
 
@@ -39,7 +29,7 @@ if($varsesion== null || $varsesion=''){
   <h1>
     Factura
     <a>
-      <img src="../assets/icon/12.png" width="30" height="30">
+      <img src="assets/icon/12.png" width="30" height="30">
     </a>
   </h1>
  
@@ -113,7 +103,4 @@ if($varsesion== null || $varsesion=''){
   </center>
 </div>
 
-</div>
-
-
-<?php include '../partials/footerA.php';?>
+<?php include 'partials/footer.php';?>

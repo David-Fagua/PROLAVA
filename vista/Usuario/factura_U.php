@@ -18,9 +18,9 @@ if($varsesion== null || $varsesion=''){
 <title>Admin</title>
 
 
-<?php include '../partials/headA.php';?>
+<?php include '../partials/headU.php';?>
 
-<?php include '../partials/menuA.php';?>
+<?php include '../partials/menuU.php';?>
 
 
 <br>
@@ -37,7 +37,7 @@ if($varsesion== null || $varsesion=''){
   <center>
 
   <h1>
-    Factura
+    Facturas
     <a>
       <img src="../assets/icon/12.png" width="30" height="30">
     </a>
@@ -116,4 +116,4 @@ if($varsesion== null || $varsesion=''){
 </div>
 
 
-<?php include '../partials/footerA.php';?>
+<?php include '../partials/footerU.php';?>

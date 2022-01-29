@@ -5,7 +5,7 @@
 <div>
   <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #021E73;">
     <a href="index.php" class="navbar-brand" >
-      <img src="assets/icon/Logo.png" width="90" height="40" alt="Lavaseco">
+      <img src="assets/icon/Logo.png" width="80" height="40" alt="Lavaseco">
     </a>
     <a href="index.php" class="navbar-brand" style="color: #F2E63D;">LAVASECO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
