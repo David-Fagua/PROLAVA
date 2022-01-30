@@ -1,5 +1,5 @@
 <?php
-    require 'conexion.php';
+    require 'db.php';
     
     $Celular = $_POST['Celular'];
     $N_factura  = $_POST['N_factura'];
@@ -19,14 +19,14 @@
     if($query){
 
     echo "<script> alert('correcto');
-        location.href = '../index.php';
+        location.href = 'factura.php';
     </script>";
 
     //--Alerta Incorrecto--//
 
     }else{
         echo "<script> alert('incorrecto');
-        location.href = '../index.php';
+        location.href = 'factura.php';
         </script>";
     }
 

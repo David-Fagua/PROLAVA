@@ -13,15 +13,14 @@ body{
 
 div#barra-lateral{
 	position:fixed;
-	width:50px;
+	width:250px;
 	height:100%;
 	background-color:#000000;
 	overflow:hidden;
-	-webkit-transition:width 0.5s cubic-bezier(.61,.01,.37,1);
 }
 
 div#barra-lateral:hover{
-	width:200px;
+	width:250px;
 }
 
 

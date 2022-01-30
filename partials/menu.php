@@ -14,13 +14,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <a href="login.php" class="nav-link" style="color: #BF0A19;">HOME</a>
-
-        <a href="Consultar_F.php" class="nav-link" style="color: #ffffff;">Consultar facturas</a>
-
-        <a href="prendas.php" class="nav-link" style="color: #ffffff;">Prendas</a>
-
-        <a href="vista/Error404.php" class="nav-link" style="color: #ffffff;">Proximamente</a>
+        <a href="index.php" class="nav-link" style="color: #BF0A19;"></a>
   
       </li>
     </ul>
@@ -28,24 +22,15 @@
     <!--Desplegable-->
 
     <ul class="nav navbar-left navbar-top-links">
+      <form role="form" action="login.php" method="post">
         <li class="dropdown navbar-inverse">
-          <button  class="btn btn-link" class="btn btn-sec"  data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+          <button href="index.php" role="button" class="btn btn-link" >
             <a >
               <img src="assets/icon/lava.png" width="40" height="40">
             </a>
           </button>
-          <ul class="dropdown-menu dropdown-user">
-            <a class="badge badge-light" class="dropdown-item" href="login.php">
-              <img src="assets/icon/1.png" width="25" height="25">
-              Iniciar Sesión
-            </a>
-            <a class="badge badge-light" class="dropdown-item" href="Registrar.php">
-              <img src="assets/icon/5.png" width="25" height="25">
-              Registrar
-            </a>
-          </ul>
         </li>
-      </ul>
+      </form>
     </div>
   </nav>
 </div>

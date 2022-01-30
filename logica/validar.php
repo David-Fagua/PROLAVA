@@ -16,7 +16,7 @@
     
     }else
     if($filas['rol_id']==2){ //cliente
-    header("location:../vista/cliente.php");
+    header("location:../vista/usuario.php");
     }else
         //echo "No existe el usuario";
         

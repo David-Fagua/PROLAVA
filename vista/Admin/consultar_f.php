@@ -1,15 +1,30 @@
+<?php 
+//seguridad de sessiones paginacion
+session_start();
+error_reporting(0);
+$varsesion= $_SESSION['username'];
+if($varsesion== null || $varsesion=''){
+    header("location:../index.php");
+    die();
+}
+
+?>
+
+<!--HTML-->
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-	<title>Lavaseco Cundinamarca</title>
+<title>FACTURA</title>
 
-	<?php include 'partials/head.php';?>
-  <?php include 'partials/menu.php';?>
 
-</br>
+<?php include '../partials/headA.php';?>
 
-<!--info-->
+<?php include '../partials/menuA.php';?>
+
+<br></br>
+
+<div id="page-wrapper">
 
 </--formulario--/>
 
@@ -94,5 +109,7 @@
   </center>
 </div>
 
-<?php include 'partials/menufinal.php';?>
-<?php include 'partials/footer.php';?>
+</div>
+
+
+<?php include '../../partials/footerA.php';?>

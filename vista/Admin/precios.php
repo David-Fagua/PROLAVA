@@ -15,20 +15,16 @@ if($varsesion== null || $varsesion=''){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Admin</title>
+<title>FACTURA</title>
 
 
-<?php include '../partials/headU.php';?>
+<?php include '../partials/headA.php';?>
 
-<?php include '../partials/menuU.php';?>
+<?php include '../partials/menuA.php';?>
 
-
-<br>
 <br></br>
 
 <div id="page-wrapper">
-
-<!--info--> 
 
 </--formulario--/>
 
@@ -37,9 +33,9 @@ if($varsesion== null || $varsesion=''){
   <center>
 
   <h1>
-    Facturas
+    Factura
     <a>
-      <img src="../assets/icon/12.png" width="30" height="30">
+      <img src="assets/icon/12.png" width="30" height="30">
     </a>
   </h1>
  
@@ -116,4 +112,4 @@ if($varsesion== null || $varsesion=''){
 </div>
 
 
-<?php include '../partials/footerU.php';?>
+<?php include '../../partials/footerA.php';?>
