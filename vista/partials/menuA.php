@@ -1,7 +1,7 @@
 
 <!--Navbar Superior-->
 <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #000000;">
-    <a href="../admin.php" class="navbar-brand" >
+    <a href="home.php" class="navbar-brand" >
         <img src="../../assets/icon/Logo.png" width="40" height="40" alt="HSD PLUS">
     </a>
     <a class="badge badge-info" style="background-color: #F2E63D;">
@@ -16,7 +16,7 @@
         <li class="dropdown navbar-inverse">
           <div>
             <button type="button" class="btn btn-link" >
-              <a href="../admin.php"  >
+              <a href="home.php"  >
                 <img src="../../assets/icon/lava.png" width="40" height="40" alt="">
               </a>
             </button>
@@ -34,7 +34,7 @@
                 </a> 
             </button>
             <ul class="dropdown-menu dropdown-user">
-                <li><a href="user_A.png.php" class="badge badge-light" style="color: #000000;"><i class="fa fa-user fa-fw"></i>Usuario</a></li>
+                <li><a href="usuario.png.php" class="badge badge-light" style="color: #000000;"><i class="fa fa-user fa-fw"></i>Usuario</a></li>
                 <li><a href="../Error404.php" class="badge badge-light" style="color: #000000;"><i class="fa fa-gear fa-fw"></i> Ajustes</a></li>
                 <li><a href="../cerrar_sesion.php" class="badge badge-light" style="color: #000000;"><i class="fa fa-sign-out fa-fw"></i>Cerrar Sesión</a></li>
             </ul>
@@ -87,7 +87,7 @@
         <div class="logo">
         <img src="../../assets/icon/4.png" width="25" height="25">
         </div>
-        <a  href="../admin.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">PROXIMAMENTE...</a>
+        <a  href="home.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">PROXIMAMENTE...</a>
     </div>
 
 </div>

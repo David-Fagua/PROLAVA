@@ -28,88 +28,67 @@ if($varsesion== null || $varsesion=''){
 
 </--formulario--/>
 
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+    $sql="SELECT *  FROM factura";
+    $query=mysqli_query($con,$sql);
+
+    $row=mysqli_fetch_array($query);
+?>
+
 <div id="wrapper" class="container">
-                
-  <center>
 
-  <h1>
-    Factura
-    <a>
-      <img src="assets/icon/12.png" width="30" height="30">
-    </a>
-  </h1>
- 
-  <hr>
-    <form  method="POST" name="form-work" action="logica/guardar.php">
 
-      <fieldset>
-      
-        <div class="form-row">
 
-          <!--Corregir o agregar metodo para buscar N_celular y que no se duplique -->
+<div class="container mt-5">
+        <div class="row"> 
+            
+            <div class="col-md-8">
+                <table class="table" >
+                    <thead class="table-success table-striped" >
+                        <tr>
+                            <th>Celular</th>
+                            <th>Factura</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Cantida de Piezas</th>
+                            <th>Detalles</th>
+                            <th>Valor</th>
+                            <th>Fecha</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
 
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Celular</label>
-            <input type="number" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  name="Celular" class="form-control" placeholder="Numero de Celular">
-          </div>
-
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Codigo de Factura</label>
-            <input type="number" name="N_factura" class="form-control" placeholder="Numero de factura">
-          </div>
-
-          <div class="form-group col-md-4">
-            <label class="control-label" for="text">Nombre del Cliente</label>
-            <input type="text" name="Nombre_Cliente" class="form-control" placeholder="Nombre del Cliente">
-          </div>
-        
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Cantidad</label>
-            <input type="text" name="Cantidad" class="form-control" placeholder="Cantidad de prendas">
-          </div>
-
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Catida de Piezas</label>
-            <input type="text" name="Piezas" class="form-control" placeholder="Catida de Piezas">
-          </div>
-        </div>
-
-        <div class="form-row">
-
-          <!--Area de texto libre-->
-
-          <div class="form-group col-md-6">
-            <label for="validationTextarea">Detalles</label>
-            <textarea name="Detalle" class="form-control " id="validationTextarea" placeholder="Describa la prenda"></textarea>
-          </div>
-
-          <!--Fin de Area de texto libre-->
-
-          <div class="form-group col-md-3">
-            <label class="control-label" for="text">Valor</label>
-            <input type="number" name="Valor" class="form-control" placeholder="Valor total">
-          </div>
-
-          </--Fecha--/>
-
-          <div class="form-group col-md-3">
-            <label class="control-label" for="text">Fecha</label>
-            <input type="date" name="Fecha_despacho" class="form-control" placeholder="AAAA/MM/DD" >
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-md-7">
-            <button type="submit" class="btn btn-primary btn-lg btn-block info">Guardar</button>
-          </div>
-        </div>
-
-      </fieldset> 
-    </form>
-  </center>
+                    <tbody>
+                            <?php
+                                while($row=mysqli_fetch_array($query)){
+                            ?>
+                                <tr>
+                                    <th><?php  echo $row['Celular']?></th>
+                                    <th><?php  echo $row['N_factura']?></th>
+                                    <th><?php  echo $row['Nombre_Cliente']?></th>
+                                    <th><?php  echo $row['Cantidad']?></th>    
+                                    <th><?php  echo $row['Piezas']?></th> 
+                                    <th><?php  echo $row['Detalle']?></th> 
+                                    <th><?php  echo $row['Valor']?></th> 
+                                    <th><?php  echo $row['Fecha_despacho']?></th> 
+                                    <th><a href="actualizar.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-info">Editar</a></th>
+                                    <th><a href="delete.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                </tr>
+                            <?php 
+                                }
+                            ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>  
 </div>
 
 </div>
+
 
 
 <?php include '../partials/footerU.php';?>

@@ -1,12 +1,17 @@
 <?php 
+    //seguridad de sessiones paginacion
+    session_start();
+    error_reporting(0);
+    $varsesion= $_SESSION['username'];
+    if($varsesion== null || $varsesion=''){
+        header("location:../../index.php");
+        die();
+    }
+
+?>
+
+<?php 
 //seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../../../index.php");
-    die();
-}
 
 ?>
   
@@ -28,6 +33,8 @@ if($varsesion== null || $varsesion=''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet">
 
 </head>
 <body>

@@ -1,3 +1,8 @@
+<?php 
+//seguridad de sessiones paginacion
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +29,7 @@
             <h2 style="color: #ffffff;">Iniciar Sesión</h2>
           </center>
           <div class="myform-bottom">
-            <form role="form" action="logica/validar.php" method="post">
+            <form role="form"  method="post">
               <div class="form-group row">
                 <h2 for="usuario" style="color: #ffffff;" class="col-sm-4 col-form-label">Usuario</h2>
                 <div class="col-sm-8">
@@ -61,4 +66,3 @@
 
 <?php include 'partials/menufinal.php';?>
 <?php include 'partials/footer.php';?>
-

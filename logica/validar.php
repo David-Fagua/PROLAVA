@@ -12,16 +12,16 @@
     $filas=mysqli_fetch_array($resultado);
 
     if($filas['rol_id']==1){ //administrador
-        header("location:../vista/admin.php");
+        header("location:../vista/admin/home.php");
     
     }else
     if($filas['rol_id']==2){ //cliente
-    header("location:../vista/usuario.php");
+    header("location:../vista/usuario/home.php");
     }else
         //echo "No existe el usuario";
         
     if($errorLogin = "Nombre de usuario y/o password incorrecto");{
-        include_once '../login.php';
+        include_once '../index.php';
     }
 
 

@@ -32,19 +32,26 @@ if($varsesion== null || $varsesion=''){
 
 </--formulario--/>
 
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+    $sql="SELECT *  FROM factura";
+    $query=mysqli_query($con,$sql);
+
+    $row=mysqli_fetch_array($query);
+?>
+
 <div id="wrapper" class="container">
                 
   <center>
 
   <h1>
-    Facturas
-    <a>
-      <img src="../assets/icon/12.png" width="30" height="30">
-    </a>
+    Factura
   </h1>
  
   <hr>
-    <form  method="POST" name="form-work" action="logica/guardar.php">
+    <form  method="POST" name="form-work" action="insertar.php">
 
       <fieldset>
       

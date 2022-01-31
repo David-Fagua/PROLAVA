@@ -1,14 +1,3 @@
-<?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
-    die();
-}
-
-?>
 
 <!--HTML-->
 
@@ -64,7 +53,7 @@ if($varsesion== null || $varsesion=''){
                                 <tr>
                                     <th><?php  echo $row['id']?></th>
                                     <th><?php  echo $row['Celular']?></th>
-                                    <th><?php  echo $row['Nombre_cliente']?></th>
+                                    <th><?php  echo $row['Nombre_Cliente']?></th>
 
                                     <th><a href="actualizar.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-info">Editar</a></th>
                                     <th><a href="delete.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-danger">Eliminar</a></th>                                        

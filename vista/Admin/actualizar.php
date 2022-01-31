@@ -1,29 +1,3 @@
-<?php 
-    include("conexion.php");
-    $con=conectar();
-
-$id=$_GET['id'];
-
-$sql="SELECT * FROM factura WHERE N_factura='$id'";
-$query=mysqli_query($con,$sql);
-
-$row=mysqli_fetch_array($query);
-?>
-
-<?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../../index.php");
-    die();
-}
-
-?>
-
-
-
 <!--HTML-->
 
 <!DOCTYPE html>
@@ -42,6 +16,18 @@ if($varsesion== null || $varsesion=''){
 <div id="page-wrapper">
 
 </--formulario--/>
+
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+$id=$_GET['id'];
+
+$sql="SELECT * FROM factura WHERE N_factura='$id'";
+$query=mysqli_query($con,$sql);
+
+$row=mysqli_fetch_array($query);
+?>
 
 <div class="container mt-5">
     <form action="update.php" method="POST">

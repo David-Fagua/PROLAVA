@@ -1,12 +1,17 @@
 <?php 
+    //seguridad de sessiones paginacion
+    session_start();
+    error_reporting(0);
+    $varsesion= $_SESSION['username'];
+    if($varsesion== null || $varsesion=''){
+        header("location:../../index.php");
+        die();
+    }
+
+?>
+
+<?php 
 //seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../../index.php");
-    die();
-}
 
 ?>
   

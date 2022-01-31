@@ -1,15 +1,3 @@
-<?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
-    die();
-}
-
-?>
-
 <!--HTML-->
 
 <!DOCTYPE html>
@@ -18,12 +6,11 @@ if($varsesion== null || $varsesion=''){
 <title>Admin</title>
 
 
-<?php include '../partials/headU.php';?>
+<?php include '../partials/headA.php';?>
 
-<?php include '../partials/menuU.php';?>
+<?php include '../partials/menuA.php';?>
 
 
-<br>
 <br></br>
 
 <div id="page-wrapper">
@@ -32,12 +19,13 @@ if($varsesion== null || $varsesion=''){
 
   </--formulario--/>
 
+
   <div class="border border-light p-5">
                   
     <div class="row">
-      <form role="form" action="admin/clientes.php" method="post">
+      <form role="form" action="clientes.php" method="post">
         <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../assets/icon/3.png" width="40" height="40">
+        <img src="../../assets/icon/3.png" width="40" height="40">
         <a style="color: #ffffff;">
           CLIENTES
         </a>
@@ -46,9 +34,9 @@ if($varsesion== null || $varsesion=''){
 
       &nbsp;
 
-      <form role="form" action="admin/factura.php" method="post">
-        <button href="admin/factura.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../assets/icon/2.png" width="40" height="40">
+      <form role="form" action="factura.php" method="post">
+        <button href="factura.php" type="submit" class="btn btn-dark" role="button">
+        <img src="../../assets/icon/2.png" width="40" height="40">
         <a style="color: #ffffff;">
           REGISTRAR FACTURA
         </a>
@@ -59,7 +47,7 @@ if($varsesion== null || $varsesion=''){
 
       <form role="form" action="consultar_f.php" method="post">
         <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../assets/icon/22.png" width="40" height="40">
+        <img src="../../assets/icon/22.png" width="40" height="40">
         <a style="color: #ffffff;">
           CONSULTAR FACTURAS
         </a>
@@ -70,7 +58,7 @@ if($varsesion== null || $varsesion=''){
 
       <form role="form" action="precios.php" method="post">
         <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../assets/icon/21.png" width="40" height="40">
+        <img src="../../assets/icon/21.png" width="40" height="40">
         <a style="color: #ffffff;">
           PRECIOS
         </a>
@@ -83,4 +71,5 @@ if($varsesion== null || $varsesion=''){
 
 </div>
 
-<?php include '../partials/footerU.php';?>
+
+<?php include '../partials/footerA.php';?>

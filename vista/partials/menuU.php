@@ -1,7 +1,7 @@
 
 <!--Navbar Superior-->
 <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #021E73;">
-    <a href="usuario.php" class="navbar-brand" >
+    <a href="home.php" class="navbar-brand" >
         <img src="../../assets/icon/Logo.png" width="40" height="40" alt="HOME">
     </a>
     <a class="badge badge-info" style="background-color: #F2E63D;">
@@ -77,7 +77,7 @@
    <div class="logo">
    <img src="../../assets/icon/4.png" width="25" height="25">
    </div>
-   <a  href="../usuario.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">PROXIMAMENTE...</a>
+   <a  href="home.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">PROXIMAMENTE...</a>
 </div>
 
 </div>
