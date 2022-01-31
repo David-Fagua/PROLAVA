@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2022 a las 09:34:56
+-- Tiempo de generación: 31-01-2022 a las 03:49:24
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `datapro`
 --
+CREATE DATABASE IF NOT EXISTS `datapro` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `datapro`;
 
 -- --------------------------------------------------------
 
@@ -73,11 +75,8 @@ CREATE TABLE `factura` (
   `Nombre_Cliente` varchar(50) DEFAULT NULL,
   `Cantidad` int(11) DEFAULT NULL,
   `Piezas` varchar(50) DEFAULT NULL,
-  `Prenda` varchar(50) DEFAULT NULL,
   `Detalle` varchar(150) DEFAULT NULL,
   `Valor` int(11) DEFAULT NULL,
-  `Estado` int(2) DEFAULT NULL,
-  `Fecha_Recibido` date DEFAULT NULL,
   `Fecha_despacho` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -85,9 +84,11 @@ CREATE TABLE `factura` (
 -- Volcado de datos para la tabla `factura`
 --
 
-INSERT INTO `factura` (`Celular`, `N_factura`, `Nombre_Cliente`, `Cantidad`, `Piezas`, `Prenda`, `Detalle`, `Valor`, `Estado`, `Fecha_Recibido`, `Fecha_despacho`) VALUES
-(3005550000, 1, 'Miguel', 2, '2', '0', 'Pantalon blanco, chapa azul, dibujos negros.', 0, 0, NULL, '2020-01-01'),
-(3005550000, 2, 'Miguel', 2, '2', '0', 'Falda', 6000, 0, NULL, '2022-01-06');
+INSERT INTO `factura` (`Celular`, `N_factura`, `Nombre_Cliente`, `Cantidad`, `Piezas`, `Detalle`, `Valor`, `Fecha_despacho`) VALUES
+(30469694300, 2, 'Jaime', 1, '1', 'Falda', 3000, '0000-00-00'),
+(30469694300, 2, 'Jaime', 1, '1', 'Falda', 3000, '0000-00-00'),
+(30469694300, 2, 'Jaime', 1, '1', 'Falda', 3000, '0000-00-00'),
+(30469694300, 2, 'Jaime', 1, '1', 'Falda', 3000, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -125,8 +126,10 @@ CREATE TABLE `tipos_prenda` (
 --
 
 INSERT INTO `tipos_prenda` (`Codigo`, `Prenda`, `Precio`) VALUES
+(0, 'Null', 1000),
 (1, 'Pantalón', 5000),
-(2, 'Camisa', 6000);
+(2, 'Camisa', 6000),
+(3, 'Chaqueta', 10000);
 
 -- --------------------------------------------------------
 
@@ -165,17 +168,6 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `estado`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `factura`
---
-ALTER TABLE `factura`
-  ADD PRIMARY KEY (`N_factura`),
-  ADD KEY `Estado` (`Estado`),
-  ADD KEY `Prenda` (`Prenda`),
-  ADD KEY `Valor` (`Valor`),
-  ADD KEY `Celular` (`Celular`),
-  ADD KEY `Nombre_Cliente` (`Nombre_Cliente`);
 
 --
 -- Indices de la tabla `roles`
@@ -222,7 +214,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tipos_prenda`
 --
 ALTER TABLE `tipos_prenda`
-  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

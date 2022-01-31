@@ -1,34 +1,4 @@
 <?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
-    die();
-}
-
-?>
-
-<!--HTML-->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<title>Consultar Factura</title>
-
-
-<?php include '../partials/headA.php';?>
-
-<?php include '../partials/menuA.php';?>
-
-<br></br>
-
-<div id="page-wrapper">
-
-</--formulario--/>
-
-<?php 
     include("conexion.php");
     $con=conectar();
 
@@ -37,14 +7,37 @@ if($varsesion== null || $varsesion=''){
 
     $row=mysqli_fetch_array($query);
 ?>
-
-<div id="wrapper" class="container">
-
-
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> FACTURA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        
+</head>
+<body>
 <div class="container mt-5">
         <div class="row"> 
             
+            <div class="col-md-3">
+                <h1>Ingrese datos</h1>
+                    <form action="insertar.php" method="POST">
+
+                        <input type="text" class="form-control mb-3" name="Celular" placeholder="Celular">
+                        <input type="text" class="form-control mb-3" name="N_factura" placeholder="Codigo de Factura">
+                        <input type="text" class="form-control mb-3" name="Nombre_Cliente" placeholder="Nombre">
+                        <input type="text" class="form-control mb-3" name="Cantidad" placeholder="Cantidad">
+                        <input type="text" class="form-control mb-3" name="Piezas" placeholder="Cantida de Piezas">
+                        <input type="text" class="form-control mb-3" name="Detalle" placeholder="Detalles">
+                        <input type="text" class="form-control mb-3" name="Valor" placeholder="Valor">
+                        <input type="text" class="form-control mb-3" name="Fecha_despacho" placeholder="Fecha">
+                        
+                        <input type="submit" class="btn btn-primary">
+                    </form>
+            </div>
+
             <div class="col-md-8">
                 <table class="table" >
                     <thead class="table-success table-striped" >
@@ -86,8 +79,5 @@ if($varsesion== null || $varsesion=''){
             </div>
         </div>  
 </div>
-
-</div>
-
-
-<?php include '../partials/footerA.php';?>
+</body>
+</html>

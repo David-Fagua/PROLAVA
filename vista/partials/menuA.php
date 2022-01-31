@@ -5,7 +5,7 @@
         <img src="../../assets/icon/Logo.png" width="40" height="40" alt="HSD PLUS">
     </a>
     <a class="badge badge-info" style="background-color: #F2E63D;">
-        <?php echo $_SESSION["name"]["privilegio"] == 0 ? 'Admin' : 'Usuario'; ?>
+        <?php echo $_SESSION["usuario"]["privilegio"] == 0 ? 'Admin' : 'Usuario'; ?>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
                     <img src="../../assets/icon/user_A.png" width="30" height="30">
                     <?php echo $_SESSION["usuario"]["privilegio"] == 0 ? 'Admin' : 'Usuario'; ?>
                     <?php echo $_SESSION["username"]; ?>
-                </a>
+                </a> 
             </button>
             <ul class="dropdown-menu dropdown-user">
                 <li><a href="user_A.png.php" class="badge badge-light" style="color: #000000;"><i class="fa fa-user fa-fw"></i>Usuario</a></li>

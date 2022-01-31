@@ -4,11 +4,13 @@ session_start();
 error_reporting(0);
 $varsesion= $_SESSION['username'];
 if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
+    header("location:../../index.php");
     die();
 }
 
 ?>
+
+
 
 <!--HTML-->
 
@@ -22,23 +24,34 @@ if($varsesion== null || $varsesion=''){
 
 <?php include '../partials/menuA.php';?>
 
-<br></br>
+<br>
+</br>
+<br>
 
 <div id="page-wrapper">
 
 </--formulario--/>
+
+<?php 
+    include("conexion.php");
+    $con=conectar();
+
+    $sql="SELECT *  FROM factura";
+    $query=mysqli_query($con,$sql);
+
+    $row=mysqli_fetch_array($query);
+?>
 
 <div id="wrapper" class="container">
                 
   <center>
 
   <h1>
-    FACTURA
+    Factura
   </h1>
  
   <hr>
-
-    <form  method="POST" name="form-work" action="../../logica/guardar.php">
+    <form  method="POST" name="form-work" action="insertar.php">
 
       <fieldset>
       
@@ -110,4 +123,4 @@ if($varsesion== null || $varsesion=''){
 </div>
 
 
-<?php include '../../partials/footerA.php';?>
+<?php include '../partials/footerA.php';?>
