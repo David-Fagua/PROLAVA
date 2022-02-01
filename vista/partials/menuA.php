@@ -85,6 +85,14 @@
 
     <div style="font-size:12px;" class="contenedor-logos">
         <div class="logo">
+        <img src="../../assets/icon/user_edit.png" width="25" height="25">
+        </div>
+        <a  href="usuarios.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">USUARIOS</a>
+    </div>
+
+
+    <div style="font-size:12px;" class="contenedor-logos">
+        <div class="logo">
         <img src="../../assets/icon/4.png" width="25" height="25">
         </div>
         <a  href="home.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #ffffff;">PROXIMAMENTE...</a>

@@ -1,14 +1,4 @@
-<?php 
-//seguridad de sessiones paginacion
-session_start();
-error_reporting(0);
-$varsesion= $_SESSION['username'];
-if($varsesion== null || $varsesion=''){
-    header("location:../index.php");
-    die();
-}
 
-?>
 
 <!--HTML-->
 
@@ -18,9 +8,9 @@ if($varsesion== null || $varsesion=''){
 <title>FACTURA</title>
 
 
-<?php include '../partials/headU.php';?>
+<?php include '../partials/headA.php';?>
 
-<?php include '../partials/menuU.php';?>
+<?php include '../partials/menuA.php';?>
 
 <br></br>
 
@@ -80,4 +70,5 @@ if($varsesion== null || $varsesion=''){
 
 </div>
 
-<?php include '../partials/footerU.php';?>
+
+<?php include '../partials/footerA.php';?>

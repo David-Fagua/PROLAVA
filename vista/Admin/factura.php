@@ -66,7 +66,7 @@
           </div>
 
           <div class="form-group col-md-2">
-            <label class="control-label" for="text">Catida de Piezas</label>
+            <label class="control-label" for="text"> Piezas</label>
             <input type="text" name="Piezas" class="form-control" placeholder="Catida de Piezas">
           </div>
         </div>

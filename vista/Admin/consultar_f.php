@@ -10,7 +10,7 @@
 
 <?php include '../partials/menuA.php';?>
 
-<br></br>
+<br>
 
 <div id="page-wrapper">
 

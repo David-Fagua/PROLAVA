@@ -16,6 +16,6 @@ $sql="UPDATE factura SET  Celular='$Celular',N_factura='$N_factura',Nombre_Clien
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: alumno.php");
+        Header("Location: consultar_f.php");
     }
 ?>

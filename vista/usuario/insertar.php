@@ -16,7 +16,7 @@ $sql="INSERT INTO factura VALUES('$Celular',' $N_factura','$Nombre_Cliente','$Ca
 $query= mysqli_query($con,$sql);
 
 if($query){
-    Header("Location: alumno.php");
+    Header("Location: factura.php");
     
 }
 

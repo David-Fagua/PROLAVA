@@ -22,7 +22,7 @@ if($varsesion== null || $varsesion=''){
 
 <?php include '../partials/menuU.php';?>
 
-<br></br>
+<br>
 
 <div id="page-wrapper">
 
