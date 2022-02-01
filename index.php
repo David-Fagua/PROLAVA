@@ -19,8 +19,7 @@
 </--formulario--/>
 
 </br>
-</br>
-</br>
+
 
 <div class="row">
     <div class="col-md-2">
@@ -30,7 +29,7 @@
       </br>
       <center>
         
-        <img src="assets/icon/logo.png" width="220" height="80" alt="">
+        <img src="assets/icon/logo.png" width="588" height="141" alt="">
 
         </br>
         </br>

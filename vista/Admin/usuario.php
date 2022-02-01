@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>USUARIO</title>
+<title>FACTURA</title>
 
 
 <?php include '../partials/headA.php';?>
@@ -23,11 +23,14 @@
         <p id="texto-contenedor-1">Nueva Fase de desarrollo en php, el sistema está en pleno desarrollo.</p>
     </div>
 
-    <div id="foto">
-            <img id="foto-contenedor-1" src="../assets/icon/1.png"/>
+    <div class="row">
+      <div class="col-md-3"> 
+        
+
+      </div>
     </div>
 
 </div>
 
 
-<?php include '../../partials/footerA.php';?>
+<?php include '../partials/footerA.php';?>

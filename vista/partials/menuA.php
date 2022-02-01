@@ -2,7 +2,7 @@
 <!--Navbar Superior-->
 <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #000000;">
     <a href="home.php" class="navbar-brand" >
-        <img src="../../assets/icon/Logo.png" width="40" height="40" alt="HSD PLUS">
+        <img src="../../assets/icon/Logo.png" width="196" height="47" alt="HOME">
     </a>
     <a class="badge badge-info" style="background-color: #F2E63D;">
         <?php echo $_SESSION["usuario"]["privilegio"] == 0 ? 'Admin' : 'Usuario'; ?>
