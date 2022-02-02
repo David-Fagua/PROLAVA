@@ -33,7 +33,7 @@
               <div class="form-group row">
                 <h2 for="usuario" style="color: #ffffff;" class="col-sm-4 col-form-label">Usuario</h2>
                 <div class="col-sm-8">
-                  <input type="text" name="username" class="form-control" id="usuario" autofocus required placeholder="Usuario">
+                  <input type="text" name="email" class="form-control" id="usuario" autofocus required placeholder="Usuario">
                 </div>
               </div>
               <div class="form-group row">

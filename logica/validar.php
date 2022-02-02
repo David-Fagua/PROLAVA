@@ -1,12 +1,12 @@
 <?php
-    $username=$_POST['username'];
+    $email=$_POST['email'];
     $clave=$_POST['clave'];
     session_start();
-    $_SESSION['username']=$username;
+    $_SESSION['email']=$email;
 
     $conexion=mysqli_connect("localhost","root","","datapro");
 
-    $consulta="SELECT*FROM usuarios where username='$username' and clave='$clave'";
+    $consulta="SELECT*FROM factura_usuarios where email='$email' and clave='$clave'";
     $resultado=mysqli_query($conexion,$consulta);
 
     $filas=mysqli_fetch_array($resultado);
@@ -21,7 +21,7 @@
         //echo "No existe el usuario";
         
     if($errorLogin = "Nombre de usuario y/o password incorrecto");{
-        include_once '../index.php';
+        include_once '../login.php';
     }
 
 

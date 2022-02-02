@@ -8,6 +8,12 @@
 
 <?php include '../partials/headA.php';?>
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../factura/js/invoice.js"></script> 
+
 <?php include '../partials/menuA.php';?>
 
 <br>
@@ -28,85 +34,9 @@
     $row=mysqli_fetch_array($query);
 ?>
 
-<div id="wrapper" class="container">
-                
-  <center>
 
-  <h1>
-    Factura
-  </h1>
- 
-  <hr>
-    <form  method="POST" name="form-work" action="insertar.php">
-
-      <fieldset>
-      
-        <div class="form-row">
-
-          <!--Corregir o agregar metodo para buscar N_celular y que no se duplique -->
-
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Celular</label>
-            <input type="number" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"  name="Celular" class="form-control" placeholder="Numero de Celular">
-          </div>
-
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Codigo de Factura</label>
-            <input type="number" name="N_factura" class="form-control" placeholder="Numero de factura">
-          </div>
-
-          <div class="form-group col-md-4">
-            <label class="control-label" for="text">Nombre del Cliente</label>
-            <input type="text" name="Nombre_Cliente" class="form-control" placeholder="Nombre del Cliente">
-          </div>
-        
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text">Cantidad</label>
-            <input type="text" name="Cantidad" class="form-control" placeholder="Cantidad de prendas">
-          </div>
-
-          <div class="form-group col-md-2">
-            <label class="control-label" for="text"> Piezas</label>
-            <input type="text" name="Piezas" class="form-control" placeholder="Catida de Piezas">
-          </div>
-        </div>
-
-        <div class="form-row">
-
-          <!--Area de texto libre-->
-
-          <div class="form-group col-md-6">
-            <label for="validationTextarea">Detalles</label>
-            <textarea name="Detalle" class="form-control " id="validationTextarea" placeholder="Describa la prenda"></textarea>
-          </div>
-
-          <!--Fin de Area de texto libre-->
-
-          <div class="form-group col-md-3">
-            <label class="control-label" for="text">Valor</label>
-            <input type="number" name="Valor" class="form-control" placeholder="Valor total">
-          </div>
-
-          </--Fecha--/>
-
-          <div class="form-group col-md-3">
-            <label class="control-label" for="text">Fecha</label>
-            <input type="date" name="Fecha_despacho" class="form-control" placeholder="AAAA/MM/DD" >
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="col-md-7">
-            <button type="submit" class="btn btn-primary btn-lg btn-block info">Guardar</button>
-          </div>
-        </div>
-
-      </fieldset> 
-    </form>
-  </center>
-</div>
+<?php include '../factura/create_invoice.php';?>
 
 </div>
-
 
 <?php include '../partials/footerA.php';?>

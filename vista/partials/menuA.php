@@ -30,7 +30,7 @@
                 <a style="color: #ffffff;">
                     <img src="../../assets/icon/user_A.png" width="30" height="30">
                     <?php echo $_SESSION["usuario"]["privilegio"] == 0 ? 'Admin' : 'Usuario'; ?>
-                    <?php echo $_SESSION["username"]; ?>
+                    <?php echo $_SESSION["email"]; ?>
                 </a> 
             </button>
             <ul class="dropdown-menu dropdown-user">
@@ -52,7 +52,7 @@
         <div class="logo">
         <img src="../../assets/icon/1.png" width="25" height="25">
         </div>
-        <a  href="usuario.php" class="title-menu" class="fa fa-sign-out fa-fw" style="color: #F2E63D;"><?php echo $_SESSION["username"]; ?></a>
+        <a  href="usuario.php" class="title-menu" style="color: #F2E63D;"><?php echo $_SESSION["mobile"]; ?></a>
     </div>
 
     <div style="font-size:12px;" class="contenedor-logos">

@@ -71,5 +71,7 @@
 
 </div>
 
+</div>
+
 
 <?php include '../partials/footerA.php';?>

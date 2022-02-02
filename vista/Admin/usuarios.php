@@ -22,13 +22,13 @@
     include("conexion.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM usuarios";
+    $sql="SELECT *  FROM factura_usuarios";
     $query=mysqli_query($con,$sql);
 
     $row=mysqli_fetch_array($query);
 ?>
 
-<div id="wrapper" class="usuarios">
+<div id="wrapper" class="factura_usuarios">
 
 
 
@@ -40,10 +40,12 @@
                     <thead class="table-success table-striped" >
                         <tr>
                             <th>id</th>
-                            <th>name</th>
-                            <th>username</th>
-                            <th>clave</th>
-                            <th>rol_id</th>
+                            <th>email</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Celular</th>
+                            <th>dirección</th>
+                            <th>Rol</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -55,9 +57,11 @@
                             ?>
                                 <tr>
                                     <th><?php  echo $row['id']?></th>
-                                    <th><?php  echo $row['name']?></th>
-                                    <th><?php  echo $row['username']?></th>
-                                    <th><?php  echo $row['clave']?></th>
+                                    <th><?php  echo $row['email']?></th>
+                                    <th><?php  echo $row['first_name']?></th>
+                                    <th><?php  echo $row['last_name']?></th>
+                                    <th><?php  echo $row['mobile']?></th>
+                                    <th><?php  echo $row['address']?></th>
                                     <th><?php  echo $row['rol_id']?></th>
 
                                     <th><a href="actualizar.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-info">Editar</a></th>
