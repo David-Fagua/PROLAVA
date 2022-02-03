@@ -11,14 +11,11 @@
 <?php include '../partials/menuA.php';?>
 
 
-<br></br>
-
-<div id="page-wrapper">
+<main>
 
   <!--info--> 
 
   </--formulario--/>
-
 
   <div class="border border-light p-5">
                   
@@ -71,7 +68,7 @@
 
 </div>
 
-</div>
+</main>
 
 
 <?php include '../partials/footerA.php';?>

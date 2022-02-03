@@ -1,7 +1,4 @@
-<?php 
-//seguridad de sessiones paginacion
 
-?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -50,7 +47,7 @@
               </div>
               <br/>
               <center>
-                <button style="float:center;" class="btn btn-dark" role="button" type="submit" class="mybtn">
+                <button style="float:center;" name="login" class="btn btn-dark" role="button" type="submit" class="mybtn">
                   Ingresar
                 </button>
               </center>

@@ -11,6 +11,7 @@
 
     $filas=mysqli_fetch_array($resultado);
 
+
     if($filas['rol_id']==1){ //administrador
         header("location:../vista/admin/home.php");
     
@@ -24,6 +25,5 @@
         include_once '../login.php';
     }
 
-
-
 ?>
+

@@ -12,9 +12,8 @@
 
 <?php include '../partials/menuA.php';?>
 
-<br></br>
+<main>
 
-<div id="page-wrapper">
 
 </--formulario--/>
 
@@ -68,7 +67,7 @@
         </div>  
 </div>
 
-</div>
+</main>
 
 
 <?php include '../partials/footerA.php';?>
