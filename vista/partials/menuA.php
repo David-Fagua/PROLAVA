@@ -42,7 +42,7 @@
                 </div>
             </a>
 
-            <a href="../factura/index.php">
+            <a href="consultar_f.php">
                 <div class="option">
                     <i class="fa fa-search" title="Blog"></i>
                     <h6>CONSULTAR FACTURAS</h6>
