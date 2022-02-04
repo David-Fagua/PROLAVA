@@ -1,44 +1,27 @@
+<?php 
+session_start();
+include 'Invoice.php';
+$invoice = new Invoice();
+$invoice->checkLoggedIn();
+?>
+
+<!--HTML-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<title>FACTURA</title>
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<?php include '../partials/headA.php';?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="js/invoice.js"></script>
-<link href="css/style.css" rel="stylesheet">    
+<?php include '../partials/menuA.php';?>
 
-<!--nav-->
-
-<link href="../../assets/css/index_style.css" rel="stylesheet" type="text/css">
+<main>  
 
 
-                <!-- fixed-top-->
-                <nav  class="header-navbar navbar-expand-sm navbar navbar-with-menu navbar-light bg-blue bg-lighten-5 border-blue border-lighten-4">
-                    <div class="navbar-wrapper">
-                        <div class="navbar-header">
-                            <ul class="nav navbar-nav mr-auto">
-                                <li class="nav-item mobile-menu d-md-none float-left">
-                                    <button class="nav-link menu-toggle hamburger hamburger--arrow js-hamburger is-active"><span class="hamburger-box"></span><span class="hamburger-inner"></span></button>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index.html" class="navbar-brand nav-link"><img src="../../../app-assets/images/logo/logo-dark.png"></a>
-                                </li>
-                                <li class="nav-item d-md-none float-right"><a data-toggle="collapse" data-target="#navbar-mobile" class="nav-link open-navbar-container collapsed" aria-expanded="false"><i class="ft-ellipsis-h pe-2x icon-rotate-right"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="navbar-container content">
-                            <div id="navbar-mobile" class="collapse navbar-collapse">
-                                <ul class="nav navbar-nav mr-auto">
-                                    <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>                                    
-                                </ul>
-                                <ul class="nav navbar-nav float-right">
-                                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <!--/ fixed-top-->
+<!--La factura-->
 
 
 <!--La factura-->
