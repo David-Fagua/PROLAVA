@@ -5,53 +5,58 @@
 <head>
 <title>USUARIO</title>
 
-
 <?php include '../partials/headA.php';?>
 
 <?php include '../partials/menuA.php';?>
 
-<br>
 
-<div id="page-wrapper">
+
+<main>
 
   <!--info--> 
 
   </--formulario--/>
 
-<?php 
-    include("conexion.php");
-    $con=conectar();
 
-    $sql="SELECT *  FROM factura_usuarios";
-    $query=mysqli_query($con,$sql);
+  <center>
 
-    $row=mysqli_fetch_array($query);
-?>
+    <?php 
+        include("../../logica/conexion.php");
+        $con=conectar();
 
-<div id="wrapper" class="factura_usuarios">
+        $sql="SELECT *  FROM factura_usuarios";
+        $query=mysqli_query($con,$sql);
+
+        $row=mysqli_fetch_array($query);
+    ?>
+
+    <div id="wrapper" class="factura_usuarios">
+
+        <h1>
+        Clientes
+        </h1>
 
 
+        <div class="container mt-12">
+            <div class="row"> 
+                
+                <div class="col-md-12">
+                    <table class="table" >
+                        <thead class="table-success table-striped" >
+                            <tr>
+                                <th>id</th>
+                                <th>email</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Celular</th>
+                                <th>dirección</th>
+                                <th>Rol</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-<div class="container mt-5">
-        <div class="row"> 
-            
-            <div class="col-md-8">
-                <table class="table" >
-                    <thead class="table-success table-striped" >
-                        <tr>
-                            <th>id</th>
-                            <th>email</th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Celular</th>
-                            <th>dirección</th>
-                            <th>Rol</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
+                        <tbody>
                             <?php
                                 while($row=mysqli_fetch_array($query)){
                             ?>
@@ -70,12 +75,15 @@
                             <?php 
                                 }
                             ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>  
-</div>
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+        </div>
+    </div>
 
-</div>
+  </center>
+
+</main>
 
 <?php include '../partials/footerS.php';?>

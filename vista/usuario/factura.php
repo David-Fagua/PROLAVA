@@ -47,7 +47,7 @@ if($varsesion== null || $varsesion=''){
   <center>
 
   <h1>
-    Factura
+    Usuario
   </h1>
  
   <hr>

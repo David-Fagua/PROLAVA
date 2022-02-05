@@ -14,11 +14,14 @@
 
 <main>
 
+  <!--info--> 
 
-</--formulario--/>
+  </--formulario--/>
+
+<center>
 
 <?php 
-    include("conexion.php");
+    include("../../logica/conexion.php");
     $con=conectar();
 
     $sql="SELECT *  FROM tipos_prenda";
@@ -29,12 +32,15 @@
 
 <div id="wrapper" class="tipos_prenda">
 
+<h1>
+Precios
+</h1>
 
 
-<div class="container mt-5">
+<div class="container mt-12">
         <div class="row"> 
             
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <table class="table" >
                     <thead class="table-success table-striped" >
                         <tr>
@@ -67,7 +73,10 @@
         </div>  
 </div>
 
+</center>
+
 </main>
+
 
 
 <?php include '../partials/footerA.php';?>

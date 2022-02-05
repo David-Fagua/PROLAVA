@@ -13,60 +13,75 @@
 
 <main>
 
-  <!--info--> 
-
   </--formulario--/>
 
-  <div class="border border-light p-5">
-                  
-    <div class="row">
-      <form role="form" action="clientes.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../../assets/icon/3.png" width="40" height="40">
-        <a style="color: #ffffff;">
-          CLIENTES
-        </a>
-        </button>
-      </form>
+  <center>
 
-      &nbsp;
+      <?php 
+      include '../factura/Invoice.php';
+      $invoice = new Invoice();
+      $invoice->checkLoggedIn();
+      ?>
 
-      <form role="form" action="factura.php" method="post">
-        <button href="factura.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../../assets/icon/2.png" width="40" height="40">
-        <a style="color: #ffffff;">
-          REGISTRAR FACTURA
-        </a>
-        </button>
-      </form>
+      <div id="wrapper" class="Factura">
 
-      &nbsp;
+        <h1>
+        Factura
+        </h1>
 
-      <form role="form" action="consultar_f.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../../assets/icon/22.png" width="40" height="40">
-        <a style="color: #ffffff;">
-          CONSULTAR FACTURAS
-        </a>
-        </button>
-      </form>
+      <center>
 
-      &nbsp;
+        <div class="col-md-10">
 
-      <form role="form" action="precios.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
-        <img src="../../assets/icon/21.png" width="40" height="40">
-        <a style="color: #ffffff;">
-          PRECIOS
-        </a>
-        </button>
-      </form>
+          <form action="clientes.php" class="list-group list-group-flush">
+            <button type="submit" class="btn btn-dark" role="button">
+            <img src="../../assets/icon/3.png" width="30" height="30">
+            &nbsp;
+            <a style="color: #ffffff;">
+              CLIENTES
+            </a>
+            </button>
+          </form>
 
+          &nbsp;
+
+          <form role="form" action="factura.php" method="post" class="list-group list-group-flush">
+            <button type="submit" class="btn btn-dark" role="button">
+            <img src="../../assets/icon/2.png" width="30" height="30">
+            &nbsp;
+            <a style="color: #ffffff;">
+              CREAR FACTURA
+            </a>
+            </button>
+          </form>
+
+          &nbsp;
+
+          <form role="form" action="consultar_f.php" method="post" class="list-group list-group-flush">
+            <button type="submit" class="btn btn-dark" role="button">
+            <img src="../../assets/icon/22.png" width="30" height="30">
+            &nbsp;
+            <a style="color: #ffffff;">
+              CONSULTAR FACTURAS
+            </a>
+            </button>
+          </form>
+
+          &nbsp;
+
+          <form role="form" action="precios.php" method="post" class="list-group list-group-flush">
+            <button type="submit" class="btn btn-dark" role="button">
+              <img src="../../assets/icon/21.png" width="30" height="30">
+              &nbsp;
+              <a style="color: #ffffff;">
+                PRECIOS
+              </a>
+            </button>
+          </form>
+        </div>
+      </center>
     </div>
-
-  </div>
-
-</div>
+  </center>
 
 </main>
 

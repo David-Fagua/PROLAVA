@@ -1,1 +1,0 @@
-http://localhost/PROONE/vista/index.php

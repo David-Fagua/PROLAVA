@@ -24,71 +24,54 @@ if($varsesion== null || $varsesion=''){
 
 <br>
 
-<div id="page-wrapper">
+<main>
 
 </--formulario--/>
 
 <?php 
-    include("conexion.php");
-    $con=conectar();
-
-    $sql="SELECT *  FROM factura";
-    $query=mysqli_query($con,$sql);
-
-    $row=mysqli_fetch_array($query);
+include '../factura/Invoice.php';
+$invoice = new Invoice();
+$invoice->checkLoggedIn();
 ?>
 
-<div id="wrapper" class="container">
+<h1>
+Facturas
+</h1>
 
+<div class="container">     
 
+  <table id="data-table" class="table table-condensed table-striped">
+    <thead>
+      <tr>
+        <th width="7%">Fac. No.</th>
+        <th width="15%">Fecha Creación</th>
+        <th width="35%">Cliente</th>
+        <th width="15%">Fatura Total</th>
+        <th width="3%"></th>
+        <th width="3%"></th>
+        <th width="3%"></th>
+      </tr>
+    </thead>
+    <?php       
+    $invoiceList = $invoice->getInvoiceList();
+    foreach($invoiceList as $invoiceDetails){
+        $invoiceDate = date("d/M/Y, H:i:s", strtotime($invoiceDetails["order_date"]));
+        echo '
+          <tr>
+            <td>'.$invoiceDetails["order_id"].'</td>
+            <td>'.$invoiceDate.'</td>
+            <td>'.$invoiceDetails["order_receiver_name"].'</td>
+            <td>'.$invoiceDetails["order_total_after_tax"].'</td>
+            <td><a href="../factura/print_invoice.php?invoice_id='.$invoiceDetails["order_id"].'" title="Imprimir Factura"><div class="btn btn-primary"><span class="fa fa-print"></span></div></a></td>
+            <td><a href="../factura/edit_invoice.php?update_id='.$invoiceDetails["order_id"].'"  title="Editar Factura"><div class="btn btn-primary"><span class="fa fa-pencil-square-o"></span></div></a></td>
+            <td><a href="#" id="'.$invoiceDetails["order_id"].'" class="deleteInvoice"  title="Borrar Factura"><div class="btn btn-danger"><span class="fa fa-trash-o fa-lg"></span></div></a></td>
+          </tr>
+        ';
+    }       
+    ?>
+  </table>  
+</div>  
 
-<div class="container mt-5">
-        <div class="row"> 
-            
-            <div class="col-md-8">
-                <table class="table" >
-                    <thead class="table-success table-striped" >
-                        <tr>
-                            <th>Celular</th>
-                            <th>Factura</th>
-                            <th>Nombre</th>
-                            <th>Cantidad</th>
-                            <th>Cantida de Piezas</th>
-                            <th>Detalles</th>
-                            <th>Valor</th>
-                            <th>Fecha</th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                            <?php
-                                while($row=mysqli_fetch_array($query)){
-                            ?>
-                                <tr>
-                                    <th><?php  echo $row['Celular']?></th>
-                                    <th><?php  echo $row['N_factura']?></th>
-                                    <th><?php  echo $row['Nombre_Cliente']?></th>
-                                    <th><?php  echo $row['Cantidad']?></th>    
-                                    <th><?php  echo $row['Piezas']?></th> 
-                                    <th><?php  echo $row['Detalle']?></th> 
-                                    <th><?php  echo $row['Valor']?></th> 
-                                    <th><?php  echo $row['Fecha_despacho']?></th> 
-                                    <th><a href="actualizar.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-info">Editar</a></th>
-                                    <th><a href="delete.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
-                                </tr>
-                            <?php 
-                                }
-                            ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>  
-</div>
-
-</div>
-
-
+</main>
 
 <?php include '../partials/footerU.php';?>

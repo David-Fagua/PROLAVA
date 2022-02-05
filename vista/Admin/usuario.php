@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>FACTURA</title>
+<title>Usuario</title>
 
 
 <?php include '../partials/headA.php';?>
@@ -12,25 +12,39 @@
 
 <br></br>
 
-<div id="page-wrapper">
+<main>
 
   <!--info--> 
 
   </--formulario--/>
 
-  <div id="texto">
-        <!--Cuerpo-->
-        <p id="texto-contenedor-1">Nueva Fase de desarrollo en php, el sistema está en pleno desarrollo.</p>
-    </div>
+  </br>
+  </br>
 
-    <div class="row">
-      <div class="col-md-3"> 
-        
+  <center>
 
+    <div class="col-md-1">
       </div>
-    </div>
+      <div class="col-md-10">
 
-</div>
+    <div id="texto">
+          <!--Cuerpo-->
+          <p id="texto-contenedor-1">Nueva Fase de desarrollo en php, el sistema está en pleno desarrollo.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"> 
+          
+
+        </div>
+      </div>
+
+        </div> 
+      <div class="col-md-1">
+      </div>
+  </center>
+
+</main>
 
 
 <?php include '../partials/footerA.php';?>

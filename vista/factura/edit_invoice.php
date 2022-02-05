@@ -1,11 +1,11 @@
 <?php 
 session_start();
-include 'Invoice.php';
+include '../factura/Invoice.php';
 $invoice = new Invoice();
 $invoice->checkLoggedIn();
 if(!empty($_POST['companyName']) && $_POST['companyName'] && !empty($_POST['invoiceId']) && $_POST['invoiceId']) {	
 	$invoice->updateInvoice($_POST);	
-	header("Location:invoice_list.php");	
+	header("../admin/home.php");	
 }
 if(!empty($_GET['update_id']) && $_GET['update_id']) {
 	$invoiceValues = $invoice->getInvoice($_GET['update_id']);		
@@ -13,66 +13,47 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 }
 ?>
 
-
-<title>Editar</title>
-
-
 <!--HTML-->
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-
-<title>FACTURA</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="../js/invoice.js"></script>
-<link href="../css/style.css" rel="stylesheet">
+<script src="../../assets/js/invoice.js"></script>
+<link href="../../assets/css/style.css" rel="stylesheet">
+
+<title>Editar</title>
 
 
-
-<?php include '../partials/headU.php';?>
-
-<?php include '../partials/menuU.php';?>
-
-<main>  
-
+<!--Editar Factura :v-->
 
 <div class="container content-invoice">
     	<form action="" id="invoice-form" method="post" class="invoice-form" role="form" novalidate> 
 	    	<div class="load-animate animated fadeInUp">
 
-		    	<div class="row">   
+		    	<div class="row">
+                
+	                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	                    <center>
+	                        <h2 style="color: #000000;">Editar Factura</h2>
+	                      </center>
 
-		      		<div class="form-row">
-		      			<h1 class="form-group col-md-10">Cliente</h1>
-						  <div class="form-group col-md-2">
-						  <h3 >Atendido</h3>
-						  
-						  <p><?php echo $_SESSION['user']; ?><br>	</p>
+	                </div>                  
 
-						  </div>
-						  
-					</div>
+	            </div>
+				<div class="row"> 
 
-					<div class="form-row">
-		      			<h3 class="form-group col-md-3">Nombre</h3>
-						  <h3 class="form-group col-md-3">Celular</h3>
-						  <h3 class="form-group col-md-6">Dirrección</h3>
+					<div class="form-row" class="form-group col-md-4">
 
-					</div>
-
-					<div class="form-row">
-
-		      			<div class="form-group col-md-3">
+		      			<div class="form-group col-md-4">
+							<h4 class="form-group col-md-4">Nombre</h4>
 							<input value="<?php echo $invoiceValues['order_receiver_name']; ?>" type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre de Empresa" autocomplete="off">
 						</div>
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
+							<h4 class="form-group col-md-4">Celular</h4>
 							<textarea class="form-control" rows="3" name="celular" id="celular" placeholder="Su Dirección"><?php echo $invoiceValues['celular']; ?></textarea>
 						</div>
-						<div class="form-group col-md-3">
+						<div class="form-group col-md-4">
+							<h4 class="form-group col-md-4">Dirección</h4>
 							<textarea class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></textarea>
 						</div>
 						
@@ -126,12 +107,15 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 						<div class="form-group">
 							<input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
 							<input type="hidden" value="<?php echo $invoiceValues['order_id']; ?>" class="form-control" name="invoiceId" id="invoiceId">
-			      			<input data-loading-text="Updating Invoice..." type="submit" name="invoice_btn" value="Save Invoice" class="btn btn-success submit_btn invoice-save-btm">
+			      			<input data-loading-text="Updating Invoice..." type="submit" name="invoice_btn" value="Actualizar factura" class="btn btn-success submit_btn invoice-save-btm">
 			      		</div>
 						
 		      		</div>
 
 					<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+						<h2 >Atendido</h2>
+						  
+						<p><?php echo $_SESSION['user']; ?><br>	</p>
 					</div>
 
 		      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -187,6 +171,3 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 		</form>			
     </div>
 </div>	
-
-
-<?php include '../partials/footerU.php';?>

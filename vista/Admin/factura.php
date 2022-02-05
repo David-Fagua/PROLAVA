@@ -6,7 +6,6 @@
 
 <title>FACTURA</title>
 
-
 <?php include '../partials/headA.php';?>
 
 <?php include '../partials/menuA.php';?>
@@ -15,18 +14,15 @@
 
 </--formulario--/>
 
-<?php 
-    include("conexion.php");
-    $con=conectar();
-
-    $sql="SELECT *  FROM factura";
-    $query=mysqli_query($con,$sql);
-
-    $row=mysqli_fetch_array($query);
-?>
-
-
-<?php include '../factura/create_invoice.php';?>
+<center>
+  <div class="col-md-1">
+    </div>
+    <div class="col-md-10"> 
+    <?php include '../factura/create_invoice.php';?>
+    </div> 
+    <div class="col-md-1">
+  </div>
+</center>
 
 </main>
 

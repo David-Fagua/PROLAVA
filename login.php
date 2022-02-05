@@ -1,4 +1,29 @@
-
+<!--*********************************************************
+* Sistema de consulta para facturas                         *
+*                                                           *
+* Fecha:    2022-02-04                                      *
+* Autor:  David Fagua                                       *
+************************************************************-->
+<?php 
+  session_start();
+  include('vista/factura/header.php');
+  $loginError = '';
+  if (!empty($_POST['email']) && !empty($_POST['pwd'])) {
+    include 'vista/factura/Invoice.php';
+    $invoice = new Invoice();
+    $user = $invoice->loginUsers($_POST['email'], $_POST['pwd']); 
+    if(!empty($user)) {
+      $_SESSION['user'] = $user[0]['first_name']."".$user[0]['last_name'];
+      $_SESSION['userid'] = $user[0]['id'];
+      $_SESSION['email'] = $user[0]['email'];   
+      $_SESSION['address'] = $user[0]['address'];
+      $_SESSION['mobile'] = $user[0]['mobile'];
+      header("Location:vista/admin/home.php");
+    } else {
+      $loginError = "Invalid email or password!";
+    }
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -13,9 +38,9 @@
 
 <!--Inicio de sesión estructura-->
 
-<div class="row">
+<!--<center>
   <div class="col-md-3">
-    </div>
+  </div>
     <div class="col-md-6"> 
     <form id="loginForm" action="logica/validar.php"  method="POST" role="form" class="border border-light p-5" style="background-color: #3365A6;">
       <div class="row">
@@ -55,11 +80,53 @@
           </div>
         </div>
       </div>
-    <div class="col-md-2">
-    </div>
-  </form>
+    </form>
   </div>
-</div>
+  <div class="col-md-3">
+  </div>
+</center>-->
 
-<?php include 'partials/menufinal.php';?>
+<center>
+  <div class="col-md-3">
+  </div>
+    <div class="col-md-6"> 
+    <form id="loginForm"  method="POST" role="form" class="border border-light p-5" style="background-color: #3365A6;">
+
+      <div class="login-form">
+        <form action="" method="post">
+          <center>
+            <img src="assets/icon/Usuario.png"  width="100" height="100" alt="Lavaseco Cundinamarca">
+            <h2 style="color: #ffffff;">Iniciar Sesión</h2>
+          </center>  
+          <div class="form-group">
+            <?php if ($loginError ) { ?>
+            <div class="alert alert-warning"><?php echo $loginError; ?></div>
+            <?php } ?>
+            </div>         
+            <div class="form-group">
+                <input name="email" id="email" type="email" class="form-control" placeholder="Email address" autofocus required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="pwd" placeholder="clave" required>
+            </div> 
+            <div class="form-group">
+                <button type="submit" name="login" class="btn btn-primary" style="width: 100%;"> Acceder </button>
+            </div>
+            <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox"> Recordarme</label>
+          </div>        
+        </form>
+        </div>   
+
+        </div>
+        <div class="col-xs-6">-</div> 
+        </div>    
+      </div>  
+
+    </div>
+  <div class="col-md-3">
+  </div>
+</center>
+
+<!--<?php include 'partials/menufinal.php';?>-->
 <?php include 'partials/footer.php';?>

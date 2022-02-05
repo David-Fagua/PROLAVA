@@ -1,24 +1,12 @@
 <?php 
 session_start();
-include 'Invoice.php';
+include '../factura/Invoice.php';
 $invoice = new Invoice();
 $invoice->checkLoggedIn();
 ?>
 
-<!--HTML-->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-
-<title>FACTURA</title>
-
-
-<?php include '../partials/headA.php';?>
-
-<?php include '../partials/menuA.php';?>
-
-<main>	
+<div class="container">		
 
   <table id="data-table" class="table table-condensed table-striped">
     <thead>
@@ -50,8 +38,47 @@ $invoice->checkLoggedIn();
     }       
     ?>
   </table>	
-</main>	
+</div>	
+
+</--formulario--/>
 
 
+  <div class="border border-light p-5">
+                  
+    <div class="row">
+      <form role="form" action="../factura/create_invoice.php" method="post">
+        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+        <img src="../../assets/icon/3.png" width="40" height="40">
+        <a style="color: #ffffff;">
+          CLIENTES
+        </a>
+        </button>
+      </form>
 
-<?php include '../partials/footerA.php';?>
+      &nbsp;
+
+      <form role="form" action="../factura/edit_invoice.php" method="post">
+        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+        <img src="../../assets/icon/21.png" width="40" height="40">
+        <a style="color: #ffffff;">
+          PRECIOS
+        </a>
+        </button>
+      </form>
+
+      &nbsp;
+
+      <form role="form" action="../factura/invoice_list.php" method="post">
+        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+        <img src="../../assets/icon/21.png" width="40" height="40">
+        <a style="color: #ffffff;">
+          PRECIOS
+        </a>
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

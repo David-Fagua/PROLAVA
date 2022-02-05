@@ -27,7 +27,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>
 		<td colspan="2" align="center" style="font-size:150Spx">
 			<b>
-				00000'.$invoiceValues['order_id'].'
+			N°'.$invoiceValues['order_id'].'
 			</b>
 		</td>
 	</tr>
