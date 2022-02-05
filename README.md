@@ -66,7 +66,38 @@ _BD datapro_
 - Genera factura de forma automática.
 - Descargar o imprimir dicha factura.
 
-![screenshot of gitfiti](https://raw.github.com/gelstudios/gitfiti/master/gitfiti-screenshot.png "screenshot")
+_BD datapro_
+
+### Tablas
+- factura_orden
+    - order_id
+    - user_id
+    - orden_date
+    - orden_receiver_name
+    - celular
+    - order_receiver_address
+    - order_total_before_tax
+    - orden_total_tax
+    - order_tax_per
+    - order_total_after_tax
+    - order_amount_paid
+    - order_total_amount_due
+    - note
+
+- factura_orden_producto
+    - order_item_id
+    - order_id
+    - item_code
+    - item_name
+    - order_iten_quantity
+    - order_item_price
+    - order_iten_final_amount
+
+
+## Modulo imprimir facturas
+
+- Genera factura de forma automática.
+- Descargar o imprimir dicha factura.
 
 ![screenshot of factura](https://github.com/David-Fagua/PROLAVA/blob/main/assets/Img/factura.png "screenshot")
 
@@ -90,5 +121,3 @@ _BD datapro_
 
 - 🔔 Hello.
 - 👉 Visita mi sitio web https://linktr.ee/Fagua_Art 💻
-
-
