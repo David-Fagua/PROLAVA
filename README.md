@@ -59,6 +59,10 @@ _BD datapro_
 - Genera factura de forma automatica.
 - Descargar o imprimir dicha factura.
 
+![screenshot of gitfiti](https://raw.github.com/gelstudios/gitfiti/master/gitfiti-screenshot.png "screenshot")
+
+![screenshot of factura](https://github.com/David-Fagua/PROLAVA/blob/main/assets/Img/factura.png "screenshot")
+
 ## Modulo clientes
 
 - Agregar los datos del cliente usando como _id_ el _telefono_.
@@ -79,3 +83,5 @@ _BD datapro_
 
 - 🔔 Hello.
 - 👉 Visita mi sitio web https://linktr.ee/Fagua_Art 💻
+
+
