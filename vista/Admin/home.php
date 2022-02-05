@@ -26,7 +26,7 @@
       <div id="wrapper" class="Factura">
 
         <h1>
-        Factura
+        Menu
         </h1>
 
       <center>
