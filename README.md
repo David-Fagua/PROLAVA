@@ -10,18 +10,25 @@ _Pendiente_
 - Revisar Permisos para usuario.
 - Opciones para escoger datos. 
 
+
+
+
 # MODULOS PROLAVA
+
 
 ## Modulo Login
 
--Editar agregar eliminar
-=Usuario
-=Admin
+- Entrar al sistema desde el rol:
+	- Usuario
+	- Admin
+- Agregar nuevos Usuarios desde el rol de Admin.
+- Editar los usuarios.
+- Eliminar usuarios.
 
 
 ## Modulo Facturas 
 
-- Buscar facturas por medio del celular o por el numero de factura.
+- Buscar facturas por medio del celular o por el número de factura.
 - Agregar facturas nuevas, esto incluye facturas ya existentes.
 - Editar ciertos campos de la factura.
 - Eliminar facturas.
@@ -56,7 +63,7 @@ _BD datapro_
 
 ## Modulo imprimir facturas
 
-- Genera factura de forma automatica.
+- Genera factura de forma automática.
 - Descargar o imprimir dicha factura.
 
 ![screenshot of gitfiti](https://raw.github.com/gelstudios/gitfiti/master/gitfiti-screenshot.png "screenshot")
@@ -65,9 +72,9 @@ _BD datapro_
 
 ## Modulo clientes
 
-- Agregar los datos del cliente usando como _id_ el _telefono_.
+- Agregar los datos del cliente usando como _id_ el _teléfono_.
 - Editar el cliente.
-- Opcion para agregar muchos _celulares_ con el mismo Nombre o cliente.
+- Opción para agregar muchos _celulares_ con el mismo Nombre o cliente.
 
 
 ## Modulo Productos
@@ -75,9 +82,9 @@ _BD datapro_
 - Agregar productos.
 - Precios de dichos productos.
 
-## Modulo Estadisticas
+## Modulo Estadísticas
 
--Estadisticas del dia.
+-Estadísticas del día.
 
 ## Mis Redes Sociales
 
