@@ -20,7 +20,7 @@
       $_SESSION['mobile'] = $user[0]['mobile'];
       header("Location:vista/admin/home.php");
     } else {
-      $loginError = "Invalid email or password!";
+      $loginError = "Correo electrónico o contraseña no válidos!";
     }
   }
 ?>
@@ -100,7 +100,7 @@
           </center>  
           <div class="form-group">
             <?php if ($loginError ) { ?>
-            <div class="alert alert-warning"><?php echo $loginError; ?></div>
+            <div class="alert alert-danger"><?php echo $loginError; ?></div>
             <?php } ?>
             </div>         
             <div class="form-group">
@@ -113,7 +113,7 @@
                 <button type="submit" name="login" class="btn btn-primary" style="width: 100%;"> Acceder </button>
             </div>
             <div class="clearfix">
-            <label class="pull-left checkbox-inline"><input type="checkbox"> Recordarme</label>
+            <!--<label class="pull-left checkbox-inline"><input type="checkbox"> Recordarme</label>-->
           </div>        
         </form>
         </div>   

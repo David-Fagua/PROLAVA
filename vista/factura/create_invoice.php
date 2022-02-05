@@ -25,24 +25,31 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
 <div class="container content-invoice">
     <form action="" id="invoice-form" method="post" class="invoice-form" role="form" novalidate> 
         <div class="load-animate animated fadeInUp">
-            <div class="row">
-                
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <center>
-                        <h1 style="color: #000000;">Crear Factura</h1>
-                      </center>
 
-                </div>                  
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <center>
+                    <h1 style="color: #000000;">Crear Factura</h1>
+                    </center>
 
             </div>
+            
             <input id="currency" type="hidden" value="$">
             
             <!--Datos cliente-->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <table class="table table-bordered table-hover" id="invoiceItem">   
+                        <tr>
+                            <th >
+                                <h3 style="color: #000000;">Datos del Cliente</h3>
+                            </th>
+                        </tr>                       
+                    </table>
+                </div>
+            </div>  
                 
             <div class="form-row" >
-                <div class="form-group col-md-12">
-                    <h3>Datos del Cliente</h3>
-                </div>
             
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Nombre</h4>

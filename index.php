@@ -22,16 +22,16 @@
 
 
 <center >
-  <div class="col-md-2">
+  <div class="col-md-3">
   </div>
-    <div class="col-md-8" style="background-color: #3365A6;">
+    <div class="col-md-6" style="background-color: #3365A6;">
 
       </br>
       </br>
 
       <center >
         
-        <img  class="col-md-6" srcset="assets/icon/logo.png" width="588" height="141" alt="">
+        <img  class="col-md-12" srcset="assets/icon/logo.png">
 
 
 
@@ -55,11 +55,11 @@
       </br>
       </br>
     </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
   </div>
 </center>
 
 <br>
 
-<!--<?php include 'partials/menufinal.php';?>-->
+<?php include 'partials/menufinal.php';?>
 <?php include 'partials/footer.php';?>

@@ -15,7 +15,7 @@ if($varsesion== null || $varsesion=''){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<title>Admin</title>
+<title>Factura</title>
 
 
 <?php include '../partials/headU.php';?>
@@ -47,7 +47,7 @@ if($varsesion== null || $varsesion=''){
   <center>
 
   <h1>
-    Usuario
+    Crear Factura
   </h1>
  
   <hr>

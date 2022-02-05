@@ -16,11 +16,11 @@
 
 <center>
   <div class="col-md-1">
-    </div>
+  </div>
     <div class="col-md-10"> 
-    <?php include '../factura/create_invoice.php';?>
+      <?php include '../factura/create_invoice.php';?>
     </div> 
-    <div class="col-md-1">
+  <div class="col-md-1">
   </div>
 </center>
 
