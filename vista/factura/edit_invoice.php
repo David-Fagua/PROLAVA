@@ -5,7 +5,7 @@ $invoice = new Invoice();
 $invoice->checkLoggedIn();
 if(!empty($_POST['companyName']) && $_POST['companyName'] && !empty($_POST['invoiceId']) && $_POST['invoiceId']) {	
 	$invoice->updateInvoice($_POST);	
-	header("../admin/home.php");	
+	header("Location:consultar_f.php");	
 }
 if(!empty($_GET['update_id']) && $_GET['update_id']) {
 	$invoiceValues = $invoice->getInvoice($_GET['update_id']);		
@@ -40,35 +40,47 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 	                </div>                  
 
 	            </div>
-				<div class="row"> 
 
-					<div class="form-row" class="form-group col-md-4">
+				<!--Datos cliente-->
 
-		      			<div class="form-group col-md-4">
-							<h4 class="form-group col-md-4">Nombre</h4>
-							<input value="<?php echo $invoiceValues['order_receiver_name']; ?>" type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre de Empresa" autocomplete="off">
-						</div>
-						<div class="form-group col-md-4">
-							<h4 class="form-group col-md-4">Celular</h4>
-							<textarea class="form-control" rows="3" name="celular" id="celular" placeholder="Su Dirección"><?php echo $invoiceValues['celular']; ?></textarea>
-						</div>
-						<div class="form-group col-md-4">
-							<h4 class="form-group col-md-4">Dirección</h4>
-							<textarea class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></textarea>
-						</div>
+				<div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <table class="table table-bordered table-hover">   
+                        <tr>
+                            <th >
+                                <h3 style="color: #000000;">Datos del Cliente</h3>
+                            </th>
+                        </tr>                       
+                    </table>
+                </div>
+            </div> 
+			
+				<div class="row">
+
+					<div class="form-group col-md-4">
+						<h4 class="form-group col-md-4">Nombre</h4>
+						<input value="<?php echo $invoiceValues['order_receiver_name']; ?>" type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre de Empresa" autocomplete="off">
+					</div>
+					<div class="form-group col-md-4">
+						<h4 class="form-group col-md-4">Celular</h4>
+						<input value="<?php echo $invoiceValues['celular']; ?>" type="text" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
+					</div>
+					<div class="form-group col-md-4">
+						<h4 class="form-group col-md-4">Dirección</h4>
+						<textarea class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></textarea>
+					</div>
 						
-		      		</div>
 		      	</div>
 		      	<div class="row">
 		      		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<table class="table table-bordered table-hover" id="invoiceItem">	
 							<tr>
-								<th width="2%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
-							<th width="15%">Prod. No</th>
-							<th width="38%">Nombre Producto</th>
-							<th width="15%">Cantidad</th>
-							<th width="15%">Precio</th>								
-							<th width="15%">Total</th>
+							<th width="1%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
+							<th width="5%">Prod. No</th>
+							<th width="40%">Nombre Producto</th>
+							<th width="5%">Cantidad</th>
+							<th width="12%">Precio</th>								
+							<th width="12%">Total</th>
 							</tr>
 							<?php 
 							$count = 0;
@@ -98,27 +110,36 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 
 					<!--Totales-->
 
-					<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
 		      			<h3>Notas: </h3>
 		      			<div class="form-group">
 							<textarea class="form-control txt" rows="5" name="notes" id="notes" placeholder="Your Notes"><?php echo $invoiceValues['note']; ?></textarea>
 						</div>
 						<br>
-						<div class="form-group">
-							<input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
-							<input type="hidden" value="<?php echo $invoiceValues['order_id']; ?>" class="form-control" name="invoiceId" id="invoiceId">
-			      			<input data-loading-text="Updating Invoice..." type="submit" name="invoice_btn" value="Actualizar factura" class="btn btn-success submit_btn invoice-save-btm">
-			      		</div>
 						
 		      		</div>
 
-					<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+					<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+						
+						<div>
+							<label class="control-label" for="text">Fecha de Entrega</label>
+							<?php echo $invoiceValues['fecha_entrega']; ?>
+							<!--<input type="date" value="<?php echo $invoiceValues['fecha_entrega']; ?>" name="fecha_entrega" id="fecha_entrega" placeholder="AAAA/MM/DD">-->
+						</div>
+
+						<div class="form-group">
+							<label class="control-label" for="text">Dirección de Entrega</label>
+							<textarea class="form-control txt" rows="5" name="dir_entrega" id="dir_entrega" placeholder="Dirección de entrega"><?php echo $invoiceValues['dir_entrega']; ?></textarea>
+						</div>
+
 						<h2 >Atendido</h2>
 						  
 						<p><?php echo $_SESSION['user']; ?><br>	</p>
+
+						
 					</div>
 
-		      		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+		      		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						<form role="form"  method="post">
 
 							<div class="form-group row">
@@ -161,6 +182,11 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 								<div class="col-sm-8">
 									<input value="<?php echo $invoiceValues['order_total_amount_due']; ?>" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Amount Due">
 								</div>
+							</div>
+							<div class="form-group">
+								<input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
+								<input type="hidden" value="<?php echo $invoiceValues['order_id']; ?>" class="form-control" name="invoiceId" id="invoiceId">
+								<input data-loading-text="Updating Invoice..." type="submit" name="invoice_btn" value="Actualizar factura" class="btn btn-success submit_btn invoice-save-btm">
 							</div>
 
 						</span>

@@ -1,5 +1,3 @@
-
-
 <?php 
 session_start();
 include '../factura/Invoice.php';
@@ -7,7 +5,7 @@ $invoice = new Invoice();
 $invoice->checkLoggedIn();
 if(!empty($_POST['companyName']) && $_POST['companyName']) {    
     $invoice->saveInvoice($_POST);
-    header("Location:home.php");    
+    header("Location:consultar_f.php");    
 }
 ?>
 
@@ -29,7 +27,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <center>
                     <h1 style="color: #000000;">Crear Factura</h1>
-                    </center>
+                </center>
 
             </div>
             
@@ -39,7 +37,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <table class="table table-bordered table-hover" id="invoiceItem">   
+                    <table class="table table-bordered table-hover">   
                         <tr>
                             <th >
                                 <h3 style="color: #000000;">Datos del Cliente</h3>
@@ -57,7 +55,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                 </div>
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Celular</h4>
-                    <input type="text" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
+                    <input type="number" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
                 </div>
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Dirección</h4>
@@ -76,14 +74,27 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                         <th width="1%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
                         <th width="5%">Prod. No</th>
                         <th width="40%">Nombre Producto</th>
-                        <th width="15%">Cantidad</th>
-                        <th width="15%">Precio</th>                             
-                        <th width="15%">Total</th>
+                        <th width="5%">Cantidad</th>
+                        <th width="12%">Precio</th>                             
+                        <th width="12%">Total</th>
                     </tr>                           
                     <tr>
                         <td><input class="itemRow" type="checkbox"></td>
                         <td><input type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off"></td>
-                        <td><input type="text" name="productName[]" id="productName_1" class="form-control" autocomplete="off"></td>            
+                        <td>
+                            <select type="text" name="productName[]" class="form-control"  id="productName_1" class="form-control" autocomplete="off">
+                                <?php  
+                                include("../../logica/conexion.php");
+                                $con=conectar();
+                            
+                                $sql="SELECT *  FROM productos";
+                                $query=mysqli_query($con,$sql);
+                                while ($row = mysqli_fetch_array($query)){
+                                echo '<option value="'.$row['prenda'].'">'.$row['prenda'].'</option>';
+                                }
+                                ?>
+                            </select>
+                        </td>            
                         <td><input type="number" name="quantity[]" id="quantity_1" class="form-control quantity" autocomplete="off"></td>
                         <td><input type="number" name="price[]" id="price_1" class="form-control price" autocomplete="off"></td>
                         <td><input type="number" name="total[]" id="total_1" class="form-control total" autocomplete="off"></td>
@@ -103,27 +114,33 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
 
         <!--Notas-->
 
-        <div class="row">   
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="row">
+               
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                 <h3>Notas: </h3>
                 <div class="form-group">
                     <textarea class="form-control txt" rows="5" name="notes" id="notes" placeholder="Notas"></textarea>
                 </div>
-                <br>
-                <div class="form-group">
-                    <input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
-                    <input data-loading-text="Guardando factura..." type="submit" name="invoice_btn" value="Guardar Factura" class="btn btn-success submit_btn invoice-save-btm">                       
-                </div>
+                                
             </div>
 
             <!--espacio-->
 
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <div>
+                    <label class="control-label" for="text">Fecha de Entrega</label>
+                    <input type="date" name="fecha_entrega" class="form-control" placeholder="AAAA/MM/DD" >
+                </div>
+                <br>
+                <div class="form-group">
+                    <h4 class="form-group">Dirección de Entrega</h4>
+                    <textarea class="form-control" rows="3" name="dir_entrega" id="dir_entrega" placeholder="Su dirección"></textarea>
+                </div>
             </div>
 
             <!--Totales-->
 
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                 
 
                     <div class="myform-bottom">
@@ -166,6 +183,11 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                                 <div class="col-sm-8">
                                     <input value="" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Cantidad debida">
                                 </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="hidden" value="<?php echo $_SESSION['userid']; ?>" class="form-control" name="userId">
+                                <input data-loading-text="Guardando factura..." type="submit" name="invoice_btn" value="Guardar Factura" class="btn btn-success submit_btn invoice-save-btm">                       
                             </div>
 
                         </form>

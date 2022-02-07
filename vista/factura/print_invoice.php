@@ -16,8 +16,9 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//NOMBRE DE LA EMPRESA
 	<tr>
 		<td colspan="2" align="center">
-			<b style="font-size:45Spx">LAVASECO CUNDINAMARCA</b><br /> 
-			<b style="font-size:20Spx">NIT 0000000</b>
+			<b style="font-size:45Spx">LAVASECO CUNDINAMARCA</b><br/> 
+			<b style="font-size:20Spx">Cels. 310 278 5726 - 311 555 1523</b><br/>
+			<b style="font-size:20Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b>
 		</td>
 		
 	</tr>
@@ -50,7 +51,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	</tr>
 	</table>
 	<br />
-	<table style="font-size:45px" width="100%" border="1" cellpadding="5" cellspacing="0">
+	<table style="font-size:35px" width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>
 		<th align="left">Nombre</th>
 		<th align="left">Cantidad</th>
@@ -75,8 +76,8 @@ $output .= '
 	</tr>
 
 	<tr>
-	<td align="right" colspan="2"><b>Tasa Impuesto :</b></td>
-	<td align="left">'.$invoiceValues['order_tax_per'].'</td>
+	<td align="right" colspan="2"><b>Tasa IVA :</b></td>
+	<td align="left">'.$invoiceValues['order_tax_per'].'%</td>
 	</tr>
 
 	<tr>
@@ -95,7 +96,7 @@ $output .= '
 	</tr>
 
 	<tr>
-	<td align="right" colspan="2"><b>Monto adeudado:</b></td>
+	<td align="right" colspan="2"><b>PENDIENTE CANCELAR:</b></td>
 	<td align="left">'.$invoiceValues['order_total_amount_due'].'</td>
 	</tr>
 	

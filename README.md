@@ -2,14 +2,27 @@
 App de Lavandería. 
 
 
+_Corregir_
+
+- Logeo por roles.
 
 _Pendiente_
 
 - Agregar Método para que no se pueda cambiar a otro usuario estando logeado.
-- Corregir error al logearse mal.
 - Revisar Permisos para usuario.
-- Opciones para escoger datos. 
-
+- Desplegable con opciones para escoger datos. 
+- Opción de en barra, en proceso y entregado. 
+- Inventario de prendas.
+- Agregar menú en Admin para control de usuarios.
+- Agregar filtro en la tabla de facturas.
+- Opción de devolución por manchas o desperfectos.
+- Opción para añadir más prendas.
+- Hora de entrada y quién lo recibió.
+- Hora de entrega y quién lo entrego.
+- Opción por agregar los pagos virtuales NEQUI.
+- Llevar estadísticas o contabilidad del día.
+- Gastos (se compró una jabón)
+- 
 
 # MODULOS PROLAVA
 
@@ -70,7 +83,7 @@ _BD datapro_
 
 ## Modulo clientes
 
-- Agregar los datos del cliente usando como _id_ el _teléfono_.
+- Agrega los datos del cliente usando como _id_ el _teléfono_.
 - Editar el cliente.
 - Opción para agregar muchos _celulares_ con el mismo Nombre o cliente.
 

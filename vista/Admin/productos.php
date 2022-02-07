@@ -24,13 +24,13 @@
     include("../../logica/conexion.php");
     $con=conectar();
 
-    $sql="SELECT *  FROM tipos_prenda";
+    $sql="SELECT *  FROM productos";
     $query=mysqli_query($con,$sql);
 
     $row=mysqli_fetch_array($query);
 ?>
 
-<div id="wrapper" class="tipos_prenda">
+<div id="wrapper" class="productos">
 
 <h1>
 Precios
@@ -57,9 +57,9 @@ Precios
                                 while($row=mysqli_fetch_array($query)){
                             ?>
                                 <tr>
-                                    <th><?php  echo $row['Codigo']?></th>
-                                    <th><?php  echo $row['Prenda']?></th>
-                                    <th><?php  echo $row['Precio']?></th>
+                                    <th><?php  echo $row['id']?></th>
+                                    <th><?php  echo $row['prenda']?></th>
+                                    <th><?php  echo $row['precio']?></th>
 
                                     <th><a href="actualizar.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-info">Editar</a></th>
                                     <th><a href="delete.php?id=<?php echo $row['N_factura'] ?>" class="btn btn-danger">Eliminar</a></th>                                        

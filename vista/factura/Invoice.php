@@ -51,8 +51,8 @@ class Invoice{
 	}		
 	public function saveInvoice($POST) {		
 		$sqlInsert = "
-			INSERT INTO ".$this->invoiceOrderTable."(user_id, order_receiver_name, order_receiver_address, order_total_before_tax, order_total_tax, order_tax_per, order_total_after_tax, order_amount_paid, order_total_amount_due, note) 
-			VALUES ('".$POST['userId']."', '".$POST['companyName']."', '".$POST['address']."', '".$POST['subTotal']."', '".$POST['taxAmount']."', '".$POST['taxRate']."', '".$POST['totalAftertax']."', '".$POST['amountPaid']."', '".$POST['amountDue']."', '".$POST['notes']."')";		
+			INSERT INTO ".$this->invoiceOrderTable."(user_id, celular, fecha_entrega, order_receiver_name, order_receiver_address, order_total_before_tax, order_total_tax, order_tax_per, order_total_after_tax, order_amount_paid, order_total_amount_due, note, dir_entrega) 
+			VALUES ('".$POST['userId']."', '".$POST['celular']."', '".$POST['fecha_entrega']."', '".$POST['companyName']."', '".$POST['address']."', '".$POST['subTotal']."', '".$POST['taxAmount']."', '".$POST['taxRate']."', '".$POST['totalAftertax']."', '".$POST['amountPaid']."', '".$POST['amountDue']."', '".$POST['notes']."', '".$POST['dir_entrega']."')";		
 		mysqli_query($this->dbConnect, $sqlInsert);
 		$lastInsertId = mysqli_insert_id($this->dbConnect);
 		for ($i = 0; $i < count($POST['productCode']); $i++) {
@@ -66,7 +66,7 @@ class Invoice{
 		if($POST['invoiceId']) {	
 			$sqlInsert = "
 				UPDATE ".$this->invoiceOrderTable." 
-				SET order_receiver_name = '".$POST['companyName']."', order_receiver_address= '".$POST['address']."', order_total_before_tax = '".$POST['subTotal']."', order_total_tax = '".$POST['taxAmount']."', order_tax_per = '".$POST['taxRate']."', order_total_after_tax = '".$POST['totalAftertax']."', order_amount_paid = '".$POST['amountPaid']."', order_total_amount_due = '".$POST['amountDue']."', note = '".$POST['notes']."' 
+				SET order_receiver_name = '".$POST['companyName']."', celular= '".$POST['celular']."', fecha_entrega= '".$POST['fecha_entrega']."', order_receiver_address= '".$POST['address']."', order_total_before_tax = '".$POST['subTotal']."', order_total_tax = '".$POST['taxAmount']."', order_tax_per = '".$POST['taxRate']."', order_total_after_tax = '".$POST['totalAftertax']."', order_amount_paid = '".$POST['amountPaid']."', order_total_amount_due = '".$POST['amountDue']."', note = '".$POST['notes']."', dir_entrega = '".$POST['dir_entrega']."' 
 				WHERE user_id = '".$POST['userId']."' AND order_id = '".$POST['invoiceId']."'";		
 			mysqli_query($this->dbConnect, $sqlInsert);	
 		}		

@@ -21,10 +21,11 @@
     <div class="menu__side" id="menu_side" >
 
         <div class="name__page">
-            <img src="../../assets/icon/lava.png" width="30" height="30" alt="">
+            <img src="../../assets/icon/lava.png" width="24" height="24" alt="">
             &nbsp;
-
-            <h4><img src="../../assets/icon/Logo.png" width="196" height="47" alt="Lavaseco"></h4>
+            &nbsp;
+            &nbsp;
+            <h5><?php echo $_SESSION['user']; ?></h5>
         </div>
 
         <div class="options__menu"> 
@@ -38,7 +39,7 @@
             
             <a href="factura.php">
                 <div class="option">
-                    <i class="fa fa-ticket" title="Crear Factura"></i>
+                    <i class="fa fa-plus" title="Crear Factura"></i>
                     <h6>CREAR FACTURA</h6>
                 </div>
             </a>
@@ -50,10 +51,10 @@
                 </div>
             </a>
 
-            <a href="precios.php">
+            <a href="productos.php">
                 <div class="option">
-                    <i class="fa fa-diamond" title="Precios"></i>
-                    <h6>PRECIOS</h6>
+                    <i class="fa fa-barcode" title="Productos"></i>
+                    <h6>PRODUCTOS</h6>
                 </div>
             </a>
 
