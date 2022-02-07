@@ -69,12 +69,12 @@
 
           &nbsp;
 
-          <form role="form" action="precios.php" method="post" class="list-group list-group-flush">
+          <form role="form" action="productos.php" method="post" class="list-group list-group-flush">
             <button type="submit" class="btn btn-dark" role="button">
               <img src="../../assets/icon/21.png" width="30" height="30">
               &nbsp;
               <a style="color: #ffffff;">
-                PRECIOS
+                PRODUCTOS
               </a>
             </button>
           </form>

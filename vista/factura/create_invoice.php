@@ -51,11 +51,11 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
             
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Nombre</h4>
-                    <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre" autocomplete="off">
+                    <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre" autocomplete="off" required>
                 </div>
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Celular</h4>
-                    <input type="number" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
+                    <input type="number" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off" required>
                 </div>
                 <div class="form-group col-md-4">
                     <h4 class="form-group col-md-4">Dirección</h4>
