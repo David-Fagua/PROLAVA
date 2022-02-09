@@ -15,7 +15,15 @@
     <h1>
     Facturas
     </h1>
-
+    <form role="form" action="factura.php" class="col-md-4" method="post" class="list-group list-group-flush">
+      <button type="submit" class="btn btn-success" role="button">
+      <img src="../../assets/icon/22.png" width="30" height="30">
+      &nbsp;
+      <a style="color: #ffffff;">
+        Nueva Factura
+      </a>
+      </button>
+    </form>
 
       <div class="container mt-12">
         <div class="row"> 

@@ -19,7 +19,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="../../assets/js/invoice.js"></script>
-<link href="../../assets/css/style.css" rel="stylesheet">
+
 
 <title>Editar</title>
 
@@ -44,16 +44,16 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 				<!--Datos cliente-->
 
 				<div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <table class="table table-bordered table-hover">   
-                        <tr>
-                            <th >
-                                <h3 style="color: #000000;">Datos del Cliente</h3>
-                            </th>
-                        </tr>                       
-                    </table>
-                </div>
-            </div> 
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<table class="table table-bordered table-hover">   
+							<tr>
+								<th >
+									<h3 style="color: #000000;">Datos del Cliente</h3>
+								</th>
+							</tr>                       
+						</table>
+					</div>
+				</div>
 			
 				<div class="row">
 

@@ -46,7 +46,7 @@
           &nbsp;
 
           <form role="form" action="factura.php" method="post" class="list-group list-group-flush">
-            <button type="submit" class="btn btn-dark" role="button">
+            <button type="submit" class="btn btn-success" role="button">
             <img src="../../assets/icon/2.png" width="30" height="30">
             &nbsp;
             <a style="color: #ffffff;">
@@ -58,7 +58,7 @@
           &nbsp;
 
           <form role="form" action="consultar_f.php" method="post" class="list-group list-group-flush">
-            <button type="submit" class="btn btn-dark" role="button">
+            <button type="submit" class="btn btn-info" role="button">
             <img src="../../assets/icon/22.png" width="30" height="30">
             &nbsp;
             <a style="color: #ffffff;">
