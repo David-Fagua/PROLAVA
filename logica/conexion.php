@@ -2,11 +2,11 @@
 function conectar(){
     $host="localhost";
     $user="root";
-    $pass="";
+    $password="";
 
     $bd="datapro";
 
-    $con=mysqli_connect($host,$user,$pass);
+    $con=mysqli_connect($host,$user,$password);
 
     mysqli_select_db($con,$bd);
 

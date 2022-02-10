@@ -39,13 +39,13 @@ class Invoice{
 	}
 	public function loginUsers($email, $clave){
 		$sqlQuery = "
-			SELECT id, email, first_name, last_name, address, mobile 
+			SELECT id, email, first_name, last_name, address, mobile, rol_id 
 			FROM ".$this->invoiceUserTable." 
 			WHERE email='".$email."' AND clave='".$clave."'";
         return  $this->getData($sqlQuery);
 	}	
 	public function checkLoggedIn(){
-		if(!$_SESSION['userid']) {
+		if(!$_SESSION['rol_id']) {
 			header("Location:index.php");
 		}
 	}		
@@ -77,13 +77,15 @@ class Invoice{
 				VALUES ('".$POST['invoiceId']."', '".$POST['productCode'][$i]."', '".$POST['productName'][$i]."', '".$POST['quantity'][$i]."', '".$POST['price'][$i]."', '".$POST['total'][$i]."')";			
 			mysqli_query($this->dbConnect, $sqlInsertItem);			
 		}       	
-	}	
+	}
+	//aqui esta el motivo por el cul se ven las tablas
 	public function getInvoiceList(){
 		$sqlQuery = "
 			SELECT * FROM ".$this->invoiceOrderTable." 
-			WHERE user_id = '".$_SESSION['userid']."'";
+			WHERE user_id = '".$_SESSION['rol_id']."'";
 		return  $this->getData($sqlQuery);
-	}	
+	}
+
 	public function getInvoice($invoiceId){
 		$sqlQuery = "
 			SELECT * FROM ".$this->invoiceOrderTable." 

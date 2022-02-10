@@ -171,14 +171,14 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							</div>
 
 							<div class="form-group row">
-								<label class="col-sm-4 col-form-label">Amount Paid: &nbsp;</label>
+								<label class="col-sm-4 col-form-label">Cantidad pagada: &nbsp;</label>
 								<div class="col-sm-8">
 									<input value="<?php echo $invoiceValues['order_amount_paid']; ?>" type="number" class="form-control" name="amountPaid" id="amountPaid" placeholder="Amount Paid">
 								</div>
 							</div>
 							
 							<div class="form-group row">
-								<label class="col-sm-4 col-form-label">Amount Due: &nbsp;</label>
+								<label class="col-sm-4 col-form-label">Cantidad debida: &nbsp;</label>
 								<div class="col-sm-8">
 									<input value="<?php echo $invoiceValues['order_total_amount_due']; ?>" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Amount Due">
 								</div>

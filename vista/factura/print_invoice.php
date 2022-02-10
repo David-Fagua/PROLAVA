@@ -16,9 +16,9 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//NOMBRE DE LA EMPRESA
 	<tr>
 		<td colspan="2" align="center">
-			<b style="font-size:45Spx">LAVASECO CUNDINAMARCA</b><br/> 
-			<b style="font-size:20Spx">Cels. 310 278 5726 - 311 555 1523</b><br/>
-			<b style="font-size:20Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b>
+			<b style="font-size:65Spx">LAVASECO CUNDINAMARCA</b><br/> 
+			<b style="font-size:35Spx">Cels. 310 278 5726 - 311 555 1523</b><br/>
+			<b style="font-size:35Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b>
 		</td>
 		
 	</tr>
@@ -26,9 +26,9 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//N factura
 
 	<tr>
-		<td colspan="2" align="center" style="font-size:150Spx">
+		<td colspan="2" align="center" style="font-size:260Spx">
 			<b>
-			N°'.$invoiceValues['order_id'].'
+			'.$invoiceValues['order_id'].'
 			</b>
 		</td>
 	</tr>
@@ -41,7 +41,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 			Fecha : '.$invoiceDate.'<br />
 			Cliente: <b style="font-size:50Spx">'.$invoiceValues['order_receiver_name'].'</b><br /> 
 			Celular: '.$invoiceValues['celular'].'<br /> 
-			Dirección de facturación : '.$invoiceValues['order_receiver_address'].'<br />
+			Dirección : '.$invoiceValues['order_receiver_address'].'<br />
 		
 		</td>
 	</tr>
@@ -51,7 +51,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	</tr>
 	</table>
 	<br />
-	<table style="font-size:35px" width="100%" border="1" cellpadding="5" cellspacing="0">
+	<table style="font-size:42px" width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>
 		<th align="left">Nombre</th>
 		<th align="left">Cantidad</th>
@@ -69,25 +69,11 @@ foreach($invoiceItems as $invoiceItem){
 	<td align="left">'.$invoiceItem["order_item_final_amount"].'</td>   
 	</tr>';
 }
+
 $output .= '
 	<tr>
 	<td align="right" colspan="2"><b>Sub Total</b></td>
 	<td align="left"><b>'.$invoiceValues['order_total_before_tax'].'</b></td>
-	</tr>
-
-	<tr>
-	<td align="right" colspan="2"><b>Tasa IVA :</b></td>
-	<td align="left">'.$invoiceValues['order_tax_per'].'%</td>
-	</tr>
-
-	<tr>
-	<td align="right" colspan="2">Monto Tasa: </td>
-	<td align="left">'.$invoiceValues['order_total_tax'].'</td>
-	</tr>
-
-	<tr>
-	<td align="right" colspan="2">Total: </td>
-	<td align="left">'.$invoiceValues['order_total_after_tax'].'</td>
 	</tr>
 
 	<tr>
@@ -97,7 +83,7 @@ $output .= '
 
 	<tr>
 	<td align="right" colspan="2"><b>PENDIENTE CANCELAR:</b></td>
-	<td align="left">'.$invoiceValues['order_total_amount_due'].'</td>
+	<td align="left"><b>'.$invoiceValues['order_total_amount_due'].'</b></td>
 	</tr>
 	
 	</table>
@@ -105,8 +91,28 @@ $output .= '
 	<table style="font-size:30px" width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>';
 
+	$output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
+	//Fin
+
+	<tr>
+		<td colspan="2" " style="font-size:30Spx">
+			<b style="font-size:32Spx">Detalles</b><br />'.$invoiceValues['note'].'<br /> 
+		</td>
+	</tr>';
+	
+
 $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//Fin
+
+	<tr>
+		<td colspan="2"  style="font-size:50Spx">
+			
+			Atendido por : <b style="font-size:60Spx">'.$_SESSION['user'].'</b><br />
+			Para entregar: <b style="font-size:60Spx">'.$invoiceValues['fecha_entrega'].'</b><br />
+			Dirección de entrega : '.$invoiceValues['dir_entrega'].'<br />
+		
+		</td>
+	</tr>
 
 
 	<tr>
@@ -120,7 +126,13 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 			
 			<br /> 
 		</td>
-	</tr>';
+	</tr>
+	
+	</tr>
+	</table>
+	<br />
+	<table style="font-size:42px" width="100%" border="1" cellpadding="5" cellspacing="0">
+	>';
 	
 $output .= '
 	</table>
@@ -135,7 +147,8 @@ Dompdf\Autoloader::register();
 use Dompdf\Dompdf;
 $dompdf = new Dompdf();
 $dompdf->loadHtml(html_entity_decode($output));
-$dompdf->setPaper('legal');
+$paper_size = array(0,0,800,2960);
+$dompdf->set_paper($paper_size);
 $dompdf->render();
 $dompdf->stream($invoiceFileName, array("Attachment" => false));
 ?>   
