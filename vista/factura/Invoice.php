@@ -44,6 +44,8 @@ class Invoice{
 			WHERE email='".$email."' AND clave='".$clave."'";
         return  $this->getData($sqlQuery);
 	}	
+
+	//no se que es, pero tiene que ver con el rol
 	public function checkLoggedIn(){
 		if(!$_SESSION['rol_id']) {
 			header("Location:index.php");
