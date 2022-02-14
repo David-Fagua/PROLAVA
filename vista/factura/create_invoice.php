@@ -72,17 +72,18 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                 <table class="table table-bordered table-hover" id="invoiceItem">   
                     <tr>
                         <th width="1%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
-                        <th width="5%">Prod. No</th>
-                        <th width="40%">Nombre Producto</th>
+                        <!--<th width="5%">Prod. No</th>-->
+                        <th width="25%">Nombre Producto</th>
+                        <th width="15%">Servicio</th>
                         <th width="5%">Cantidad</th>
                         <th width="12%">Precio</th>                             
                         <th width="12%">Total</th>
                     </tr>                           
                     <tr>
                         <td><input class="itemRow" type="checkbox"></td>
-                        <td><input type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off"></td>
+                        <!--<td><input type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off"></td>-->
                         <td>
-                            <select type="text" name="productName[]" class="form-control"  id="productName_1" class="form-control" autocomplete="off">
+                            <select type="text" name="productName[]" id="productName_1" class="form-control" autocomplete="off">
                                 <?php  
                                 include("../../logica/conexion.php");
                                 $con=conectar();
@@ -91,6 +92,19 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                                 $query=mysqli_query($con,$sql);
                                 while ($row = mysqli_fetch_array($query)){
                                 echo '<option value="'.$row['prenda'].'">'.$row['prenda'].'</option>';
+                                }
+                                ?>
+                            </select>
+                        </td>
+                        <td>
+                            <select type="text" name="ser[]" id="ser_1" class="form-control" autocomplete="off">
+                                <?php  
+                                $con=conectar();
+                            
+                                $sql="SELECT *  FROM servicio";
+                                $query=mysqli_query($con,$sql);
+                                while ($row = mysqli_fetch_array($query)){
+                                echo '<option value="'.$row['id'].'">'.$row['ser'].'</option>';
                                 }
                                 ?>
                             </select>
@@ -103,7 +117,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
             </div>
         </div>
 
-        <!--Botones para borrar y agregar productas-->
+        <!--Botones para borrar y agregar productos-->
 
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
