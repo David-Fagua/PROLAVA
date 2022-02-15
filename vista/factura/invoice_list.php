@@ -38,7 +38,7 @@
                   <th width="15%">Factura Total</th>
                   <th width="5%"></th>
                   <th width="5%"></th>
-                  <th width="5%"></th>
+                  <!--<th width="5%"></th>-->
                 </tr>
               </thead>
               <tbody>
@@ -54,7 +54,7 @@
                         <td>'.$invoiceDetails["order_total_after_tax"].'</td>
                         <td><a href="../factura/print_invoice.php?invoice_id='.$invoiceDetails["order_id"].'" title="Imprimir Factura"><div class="btn btn-primary"><span class="fa fa-print"></span></div></a></td>
                         <td><a href="actualizar.php?update_id='.$invoiceDetails["order_id"].'"  title="Editar Factura"><div class="btn btn-primary"><span class="fa fa-pencil-square-o"></span></div></a></td>
-                        <td><a href="#" id="'.$invoiceDetails["order_id"].'" class="deleteInvoice"  title="Borrar Factura"><div class="btn btn-danger"><span class="fa fa-trash-o fa-lg"></span></div></a></td>
+                        <!-- <td><a href="#" id="'.$invoiceDetails["order_id"].'" class="deleteInvoice"  title="Borrar Factura"><div class="btn btn-danger"><span class="fa fa-trash-o fa-lg"></span></div></a></td> -->
                       </tr>
                     ';
                 }       

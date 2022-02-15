@@ -76,7 +76,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 						<table class="table table-bordered table-hover" id="invoiceItem">	
 							<tr>
 							<th width="1%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
-							<!--<th width="5%">Prod. No</th>-->
+							<th width="5%">Prod. No</th>
 							<th width="25%">Nombre Producto</th>
 							<th width="15%">Servicio</th>
 							<th width="5%">Cantidad</th>
@@ -90,7 +90,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							?>								
 							<tr>
 								<td><input class="itemRow" type="checkbox"></td>
-								<!--<td><input type="text" value="<?php echo $invoiceItem["item_code"]; ?>" name="productCode[]" id="productCode_<?php echo $count; ?>" class="form-control" autocomplete="off"></td>-->
+								<td><input type="text" value="<?php echo $invoiceItem["item_code"]; ?>" name="productCode[]" id="productCode_<?php echo $count; ?>" class="form-control" autocomplete="off"></td>
 								<td><input type="text" value="<?php echo $invoiceItem["item_name"]; ?>" name="productName[]" id="productName_<?php echo $count; ?>" class="form-control" autocomplete="off"></td>	
 								<td><input type="text" value="<?php echo $invoiceItem["servicio"]; ?>" name="servicio[]" id="servicio_<?php echo $count; ?>" class="form-control" autocomplete="off"></td>			
 								<td><input type="number" value="<?php echo $invoiceItem["order_item_quantity"]; ?>" name="quantity[]" id="quantity_<?php echo $count; ?>" class="form-control quantity" autocomplete="off"></td>
