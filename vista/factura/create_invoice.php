@@ -72,18 +72,18 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                 <table class="table table-bordered table-hover" id="invoiceItem">   
                     <tr>
                         <th width="1%"><input id="checkAll" class="formcontrol" type="checkbox"></th>
-                        <th width="5%">Prod. No</th>
+                        
                         <th width="25%">Nombre Producto</th>
-                        <th width="15%">Servicio</th>
-                        <th width="5%">Cantidad</th>
-                        <th width="12%">Precio</th>                             
-                        <th width="12%">Total</th>
+                        <th width="25%">Servicio</th>
+                        <th width="16%">Cantidad</th>
+                        <th width="16%">Precio</th>                             
+                        <th width="17%">Total</th>
                     </tr>                           
                     <tr>
                         <td><input class="itemRow" type="checkbox"></td>
-                        <td><input type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off"></td>
+                        
                         <td>
-                            <select type="text" name="productName[]" id="productName_1" class="form-control" autocomplete="off">
+                            <select type="text" name="productName[]" class="form-control"  id="productName_1" class="form-control" autocomplete="off">
                                 <?php  
                                 include("../../logica/conexion.php");
                                 $con=conectar();
@@ -97,7 +97,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                             </select>
                         </td>
                         <td>
-                            <select type="text" name="servicio[]" id="servicio_1" class="form-control" autocomplete="off">
+                            <select type="text" name="productCode[]" id="productCode_1" class="form-control" autocomplete="off">
                                 <?php  
                                 $con=conectar();
                             
@@ -108,7 +108,8 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                                 }
                                 ?>
                             </select>
-                        </td>            
+                        </td>
+
                         <td><input type="number" name="quantity[]" id="quantity_1" class="form-control quantity" autocomplete="off"></td>
                         <td><input type="number" name="price[]" id="price_1" class="form-control price" autocomplete="off"></td>
                         <td><input type="number" name="total[]" id="total_1" class="form-control total" autocomplete="off"></td>

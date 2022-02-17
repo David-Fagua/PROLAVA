@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-02-2022 a las 22:11:19
+-- Tiempo de generación: 17-02-2022 a las 04:13:58
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -97,7 +97,7 @@ CREATE TABLE `factura_orden` (
 --
 
 INSERT INTO `factura_orden` (`order_id`, `user_id`, `order_date`, `fecha_entrega`, `order_receiver_name`, `celular`, `order_receiver_address`, `order_total_before_tax`, `order_total_tax`, `order_tax_per`, `order_total_after_tax`, `order_amount_paid`, `order_total_amount_due`, `note`, `dir_entrega`) VALUES
-(9999, 1, '2022-02-05 03:54:40', '0000-00-00', 'David Maldonado', 30003999334, 'Calle esperanza ', '4000', '0', '', 4000, '5000', '-1000', 'Pantalon rojo talla 4\r\nPantalon negro rasgado talla 4\r\npantalon azul talla 4 mancha en la pierna derecha', 'calle de entrega');
+(9999, 1, '2022-02-05 03:54:40', '2022-20-22', 'David Maldonado', 30003999334, 'Calle esperanza ', '4000', '0', '', 4000, '5000', '-1000', 'Pantalon rojo talla 4\r\nPantalon negro rasgado talla 4\r\npantalon azul talla 4 mancha en la pierna derecha', 'calle de entrega');
 
 -- --------------------------------------------------------
 
@@ -139,7 +139,7 @@ CREATE TABLE `factura_usuarios` (
 
 INSERT INTO `factura_usuarios` (`id`, `email`, `clave`, `first_name`, `last_name`, `mobile`, `address`, `rol_id`) VALUES
 (1, 'registro@baulphp.com', '12345', 'Carlos', 'Escorsese', 78979676, '', 1),
-(3, 'fagua@mail.com', '12345', 'David', 'Fagua', 3015935402, 'Calle 100', 2);
+(2, 'fagua@mail.com', '12345', 'David', 'Fagua', 3015935402, 'Calle 100', 2);
 
 -- --------------------------------------------------------
 
@@ -179,10 +179,10 @@ INSERT INTO `productos` (`id`, `prenda`) VALUES
 (1, 'Pantalón'),
 (2, 'Camisa'),
 (3, 'Chaqueta'),
-(11, 'Jean'),
-(12, ' Pantalón Cuero'),
-(13, ' Pantalón Pana'),
-(17, 'Cortina ');
+(4, 'Jean'),
+(5, 'Pantalón Cuero'),
+(6, 'Pantalón Pana'),
+(7, 'Cortina ');
 
 -- --------------------------------------------------------
 
@@ -305,19 +305,19 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT de la tabla `factura_orden`
 --
 ALTER TABLE `factura_orden`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12175;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_orden_producto`
 --
 ALTER TABLE `factura_orden_producto`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_usuarios`
 --
 ALTER TABLE `factura_usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `precio`
@@ -329,7 +329,7 @@ ALTER TABLE `precio`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
