@@ -32,28 +32,28 @@
 
             <a href="home.php">
                 <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
+                    <i style="color: #FF8C00;" class="fas fa-home" title="Inicio"></i>
                     <h6>INICIO</h6>
                 </div>
             </a>
             
             <a href="factura.php">
                 <div class="option">
-                    <i class="fa fa-plus" title="Crear Factura"></i>
+                    <i style="color: #7CFC00;" class="fa fa-plus" title="Crear Factura"></i>
                     <h6>CREAR FACTURA</h6>
                 </div>
             </a>
 
             <a href="consultar_f.php">
                 <div class="option">
-                    <i class="fa fa-search" title="Consultar Facturas"></i>
+                    <i style="color: #FFFF00;" class="fa fa-search" title="Consultar Facturas"></i>
                     <h6>CONSULTAR FACTURAS</h6>
                 </div>
             </a>
 
             <a href="productos.php">
                 <div class="option">
-                    <i class="fa fa-barcode" title="Productos"></i>
+                    <i style="color: #FFD700;" class="fa fa-barcode" title="Productos"></i>
                     <h6>PRODUCTOS</h6>
                 </div>
             </a>
@@ -74,7 +74,7 @@
 
             <a href="../cerrar_sesion.php" class="selected">
                 <div class="option">
-                    <i style="color: #F2E63D;" class="fa fa-sign-in" title="Cerrrar Sesión"></i>
+                    <i style="color: #8B0000;" class="fa fa-sign-in" title="Cerrrar Sesión"></i>
                     <h6 style="color: #F2E63D;">CERRAR SESIÓN</h6>
                 </div>
             </a>
