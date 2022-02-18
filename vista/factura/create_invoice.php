@@ -59,7 +59,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                 </div>
                 <div class="form-group col-md-3">
                     <h4 class="form-group col-md-3">Email</h4>
-                    <input type="mail" class="form-control" name="address" id="address" placeholder="Correo electronico" autocomplete="off" required></imput>
+                    <input type="mail" class="form-control" name="addresss" id="addresss" placeholder="Correo electronico" autocomplete="off" required></imput>
                 </div>
                 <div class="form-group col-md-3">
                     <h4 class="form-group col-md-3">Dirección</h4>
@@ -192,13 +192,13 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label">Cantidad pagada: &nbsp;</label>
+                                <label class="col-sm-4 col-form-label">Cantidad Abonada: &nbsp;</label>
                                 <div class="col-sm-8">
                                     <input value="" type="number" class="form-control" name="amountPaid" id="amountPaid" placeholder="Cantidad pagada">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-4 col-form-label currency">Cantidad debida: &nbsp;</label>
+                                <label class="col-sm-4 col-form-label currency">Saldo Total: &nbsp;</label>
                                 <div class="col-sm-8">
                                     <input value="" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Cantidad debida">
                                 </div>

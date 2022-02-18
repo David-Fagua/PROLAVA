@@ -41,7 +41,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 			Fecha : '.$invoiceDate.'<br />
 			Cliente: <b style="font-size:50Spx">'.$invoiceValues['order_receiver_name'].'</b><br /> 
 			Celular: '.$invoiceValues['celular'].'<br /> 
-			Correo : '.$invoiceValues['address'].'<br />
+			Correo : '.$invoiceValues['addresss'].'<br />
 		
 		</td>
 	</tr>
@@ -119,14 +119,12 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 
 	<tr>
 		<td colspan="2" align="center" style="font-size:30Spx">
-			<b style="font-size:32Spx">LAS ANOTACIONES MANUALES NO TENDRAN VALIDEZ</b><br /> 
-			Recuerda que entre más grande sea el HTML y las hojas de estilo, se llevará más tiempo renderizar el documento a PDF.
+			CONTRATO DE SERVICIO ENTRE LA EMPRESA Y EL CLIENTE: Para entregar el trabajo exigimos este recibo. Toda pérdida de ropa causada por casos fortuitos como robo, incendio, etc., Están a riesgos del cliente. Pasados 30 días de la fecha de este recibo cesa la responsabilidad de la Empresa. NO respondemos por dinero, joyas y demás objetos dejados en los vestidos. Debido a la inconsistencia de las telas, paños y colores, no respondemos por encogimientos ni descoloramiento. Toda prenda que sea perdida o cambiada se responderá por diez (10) veces el valor de su lavado.
+			Articulo 2057 del C.C. y Resol. 1035 de la S.I.C. La aceptación de este recibo da por aceptadas las condiciones de la Empresa.
 
-			La ventaja de todo esto es que puedes usar estilos bonitos y usar HTML para generar un PDF, usando un lenguaje que ya sabes, en lugar de aprender a usar la librería que crea PDF de manera nativa.
-
-			No olvides que además de mostrar directamente el documento puedes forzar su descarga o guardarlo de manera local.
 			
-			<br /> 
+			<br />
+			<b style="font-size:32Spx">PARA RECLAMAR LAS PRENDAS SIN RECIBO FAVOR DEJAR COPIA DEL C.C. AL EXTRAVIAR EL RECIBO NO RESPONDEMOS POR LA ROPA</b><br />  
 		</td>
 	</tr>
 	

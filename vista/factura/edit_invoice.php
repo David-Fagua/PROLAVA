@@ -66,12 +66,12 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 						<input value="<?php echo $invoiceValues['celular']; ?>" type="text" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
 					</div>
 					<div class="form-group col-md-3">
-						<h4 >Dirección</h4>
-						<input class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></input>
+						<h4>Correo</h4>
+						<input value="<?php echo $invoiceValues['addresss']; ?>" type="text" class="form-control" name="addresss" id="addresss" placeholder="correo" autocomplete="off">
 					</div>
 					<div class="form-group col-md-3">
 						<h4>Dirección de Entrega</h4>
-						<input class="form-control txt" rows="5" name="dir_entrega" id="dir_entrega" placeholder="Dirección de entrega"><?php echo $invoiceValues['dir_entrega']; ?></input>
+						<input value="<?php echo $invoiceValues['dir_entrega']; ?>" type="text" class="form-control" name="dir_entrega" id="dir_entrega" placeholder="Su Dirección" autocomplete="off">
 					</div>
 						
 		      	</div>
@@ -172,14 +172,14 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							</div>
 
 							<div class="form-group row">
-								<label class="col-sm-4 col-form-label">Cantidad pagada: &nbsp;</label>
+								<label class="col-sm-4 col-form-label">Cantidad Abonada: &nbsp;</label>
 								<div class="col-sm-8">
 									<input value="<?php echo $invoiceValues['order_amount_paid']; ?>" type="number" class="form-control" name="amountPaid" id="amountPaid" placeholder="Monto a Pagar">
 								</div>
 							</div>
 							
 							<div class="form-group row">
-								<label class="col-sm-4 col-form-label">Cantidad debida: &nbsp;</label>
+								<label class="col-sm-4 col-form-label">Saldo Total: &nbsp;</label>
 								<div class="col-sm-8">
 									<input value="<?php echo $invoiceValues['order_total_amount_due']; ?>" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Deuda total">
 								</div>
