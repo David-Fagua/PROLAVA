@@ -12,59 +12,57 @@
 
 
 <center>
+
     <div id="wrapper" class="clientes">
 
         <h1>
         CLIENTES
         </h1>
 
-        <center>
-            <div class="col-md-1">
-                </div>
+        <div class="row">
+
+            <div class="col-md-3">
 
                 </--Formulario clientes--/>
 
-                    <div class="col-md-10">
-
-                        <form class="form-group col-md-12" method="POST" name="form-work" action="../../logica/A_clientes.php">
-                            <fieldset>
-                                <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <h3 class="control-label" for="text">Celular</h3>
-                                        <input type="text" name="celular" id="celular" class="form-control" placeholder="Ingrese nuevo producto." required>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <h3 class="control-label" for="text">Nombre</h3>
-                                        <input type="text" name="nombre_cliente" id="nombre_cliente" class="form-control" placeholder="Ingrese nuevo producto." required>
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <h3 class="control-label" for="text">Correo</h3>
-                                        <input type="mail" name="correo" id="correo" class="form-control" placeholder="Ingrese nuevo producto.">
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <h3 class="control-label" for="text">Dirección</h3>
-                                        <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Ingrese nuevo producto.">
-                                    </div>
+                    <form class="form-group col-md-12" method="POST" name="form-work" action="../../logica/A_clientes.php">
+                        <fieldset>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <h3 class="control-label" for="text">Celular</h3>
+                                    <input type="text" name="celular" id="celular" class="form-control" placeholder="Ingrese nuevo producto." required>
                                 </div>
-                                <button  type="submit" class="btn btn-primary btn-lg btn-block info">Guardar</button>
-                            </fieldset>
-                        </form>
-                    </div>
+                                <div class="form-group col-md-12">
+                                    <h3 class="control-label" for="text">Nombre</h3>
+                                    <input type="text" name="nombre_cliente" id="nombre_cliente" class="form-control" placeholder="Ingrese nuevo producto." required>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <h3 class="control-label" for="text">Correo</h3>
+                                    <input type="mail" name="correo" id="correo" class="form-control" placeholder="Ingrese nuevo producto.">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <h3 class="control-label" for="text">Dirección</h3>
+                                    <input type="text" name="direccion" id="direccion" class="form-control" placeholder="Ingrese nuevo producto.">
+                                </div>
+                            </div>
+                            <button  type="submit" class="btn btn-primary btn-lg btn-block info">Guardar</button>
+                        </fieldset>
+                    </form>
+                </div>
 
-                    
 
-                    <div class="container mt-12">
-                        <div class="row"> 
-                            
-                            <div class="col-md-12">
+                <div style="height: 480px;width: 800px; overflow-y: auto; " class="container mt-9">
+                    <div class="row">
+                                
+                        <div class="col-md-12">
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
-                                        <th>id</th>
-                                        <th>Celular</th>
-                                        <th>Nombre_cliente</th>
-                                        <th>Correo</th>
-                                        <th>Dirección</th>
+                                        <th width="5%">id</th>
+                                        <th width="15%">Celular</th>
+                                        <th width="20%">Nombre_cliente</th>
+                                        <th width="30%">Correo</th>
+                                        <th width="30%">Dirección</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -88,12 +86,21 @@
                                             }
                                         ?>
                                 </tbody>
-                            </table>
-                        </div>
+                            </table>>
+                        </div> 
+                    <div class="col-md-1">
                     </div>
-                </div> 
-            <div class="col-md-1">
-            </div>
-        </center>  
+                </div>
+            </div>  
+        </div>
     </div>
 </center>
+
+<style type="text/css"> 
+    thead tr th { 
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #3365A6;
+    }
+</style>

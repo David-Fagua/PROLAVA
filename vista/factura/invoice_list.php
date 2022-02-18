@@ -5,16 +5,17 @@
 <center>
 
   <?php 
-  include '../factura/Invoice.php';
-  $invoice = new Invoice();
-  $invoice->checkLoggedIn();
+    include '../factura/Invoice.php';
+    $invoice = new Invoice();
+    $invoice->checkLoggedIn();
   ?>
-
+  
   <div id="wrapper" class="Factura">
 
     <h1>
     Facturas
     </h1>
+    
     <form role="form" action="factura.php" class="col-md-4" method="post" class="list-group list-group-flush">
       <button type="submit" class="btn btn-success" role="button">
       <img src="../../assets/icon/22.png" width="30" height="30">
@@ -25,16 +26,16 @@
       </button>
     </form>
 
-      <div class="container mt-12">
+      <div style="height: 480px;width: 1000px; overflow-y: auto; " class="container mt-12">
         <div class="row"> 
                 
           <div class="col-md-12">
             <table id="data-table" class="table table-condensed table-striped">
-              <thead>
+              <thead class="table-success table-striped">
                 <tr>
-                  <th width="5%">Fac No.</th>
+                  <th width="10%">Fac No.</th>
                   <th width="15%">Fecha Creación</th>
-                  <th width="35%">Cliente</th>
+                  <th width="30%">Cliente</th>
                   <th width="15%">Factura Total</th>
                   <th width="5%"></th>
                   <th width="5%"></th>
@@ -67,3 +68,12 @@
     </div>
   </div>
 </center>
+
+<style type="text/css"> 
+    thead tr th { 
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #3365A6;
+    }
+</style>

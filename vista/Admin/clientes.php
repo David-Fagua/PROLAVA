@@ -12,16 +12,22 @@
 <?php include '../partials/menuA.php';?>
 
 
-<main> 
+<main>
 
-  <!--info--> 
+    <!--info--> 
 
-  </--formulario--/>
+    <center>
+        <div class="col-md-1">
+        </div>
+          <div class="col-md-10"> 
 
-  <?php include '../factura/clientes.php';?>
+          <?php include '../factura/clientes.php';?>
+          </div> 
+        <div class="col-md-1">
+        </div>
+    </center>
 
 </main>
-
 
 
 <?php include '../partials/footerA.php';?>
