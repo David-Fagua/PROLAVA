@@ -41,7 +41,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 			Fecha : '.$invoiceDate.'<br />
 			Cliente: <b style="font-size:50Spx">'.$invoiceValues['order_receiver_name'].'</b><br /> 
 			Celular: '.$invoiceValues['celular'].'<br /> 
-			Dirección : '.$invoiceValues['order_receiver_address'].'<br />
+			Correo : '.$invoiceValues['address'].'<br />
 		
 		</td>
 	</tr>
@@ -54,6 +54,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	<table style="font-size:42px" width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>
 		<th align="left">Nombre</th>
+		<th align="left">Servicio</th>
 		<th align="left">Cantidad</th>
 		<th align="left">Precio</th> 
 	</tr>';
@@ -65,6 +66,7 @@ foreach($invoiceItems as $invoiceItem){
 	
 	<tr>
 	<td align="left">'.$invoiceItem["item_name"].'</td>
+	<td align="left">'.$invoiceItem["item_code"].'</td>
 	<td align="left">'.$invoiceItem["order_item_quantity"].'</td>
 	<td align="left">'.$invoiceItem["order_item_final_amount"].'</td>   
 	</tr>';
@@ -72,17 +74,17 @@ foreach($invoiceItems as $invoiceItem){
 
 $output .= '
 	<tr>
-	<td align="right" colspan="2"><b>Sub Total</b></td>
+	<td align="right" colspan="3"><b>Sub Total</b></td>
 	<td align="left"><b>'.$invoiceValues['order_total_before_tax'].'</b></td>
 	</tr>
 
 	<tr>
-	<td align="right" colspan="2">Monto Pagado:</td>
+	<td align="right" colspan="3">Monto Pagado:</td>
 	<td align="left">'.$invoiceValues['order_amount_paid'].'</td>
 	</tr>
 
 	<tr>
-	<td align="right" colspan="2"><b>PENDIENTE CANCELAR:</b></td>
+	<td align="right" colspan="3"><b>PENDIENTE CANCELAR:</b></td>
 	<td align="left"><b>'.$invoiceValues['order_total_amount_due'].'</b></td>
 	</tr>
 	

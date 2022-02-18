@@ -57,17 +57,21 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 			
 				<div class="row">
 
-					<div class="form-group col-md-4">
-						<h4 class="form-group col-md-4">Nombre</h4>
+					<div class="form-group col-md-3">
+						<h4>Nombre</h4>
 						<input value="<?php echo $invoiceValues['order_receiver_name']; ?>" type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre de Empresa" autocomplete="off">
 					</div>
-					<div class="form-group col-md-4">
-						<h4 class="form-group col-md-4">Celular</h4>
+					<div class="form-group col-md-3">
+						<h4>Celular</h4>
 						<input value="<?php echo $invoiceValues['celular']; ?>" type="text" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off">
 					</div>
-					<div class="form-group col-md-4">
-						<h4 class="form-group col-md-4">Dirección</h4>
-						<textarea class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></textarea>
+					<div class="form-group col-md-3">
+						<h4 >Dirección</h4>
+						<input class="form-control" rows="3" name="address" id="address" placeholder="Su Dirección"><?php echo $invoiceValues['order_receiver_address']; ?></input>
+					</div>
+					<div class="form-group col-md-3">
+						<h4>Dirección de Entrega</h4>
+						<input class="form-control txt" rows="5" name="dir_entrega" id="dir_entrega" placeholder="Dirección de entrega"><?php echo $invoiceValues['dir_entrega']; ?></input>
 					</div>
 						
 		      	</div>
@@ -115,7 +119,7 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
 		      			<h3>Notas: </h3>
 		      			<div class="form-group">
-							<textarea class="form-control txt" rows="5" name="notes" id="notes" placeholder="Your Notes"><?php echo $invoiceValues['note']; ?></textarea>
+							<textarea class="form-control txt" rows="5" name="notes" id="notes" placeholder="Descripción de las prendas"><?php echo $invoiceValues['note']; ?></textarea>
 						</div>
 						<br>
 						
@@ -127,11 +131,6 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							<label class="control-label" for="text">Fecha de Entrega</label>
 							<?php echo $invoiceValues['fecha_entrega']; ?>
 							<!--<input type="date" value="<?php echo $invoiceValues['fecha_entrega']; ?>" name="fecha_entrega" id="fecha_entrega" placeholder="AAAA/MM/DD">-->
-						</div>
-
-						<div class="form-group">
-							<label class="control-label" for="text">Dirección de Entrega</label>
-							<textarea class="form-control txt" rows="5" name="dir_entrega" id="dir_entrega" placeholder="Dirección de entrega"><?php echo $invoiceValues['dir_entrega']; ?></textarea>
 						</div>
 
 						<h2 >Atendido</h2>
@@ -154,14 +153,14 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label">% IVA: &nbsp;</label>
 								<div class="col-sm-8">
-									<input value="<?php echo $invoiceValues['order_tax_per']; ?>" type="number" class="form-control" name="taxRate" id="taxRate" placeholder="Tax Rate">
+									<input value="<?php echo $invoiceValues['order_tax_per']; ?>" type="number" class="form-control" name="taxRate" id="taxRate" placeholder="Taza IVA">
 								</div>
 							</div>
 
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label">Total IVA: &nbsp;</label>
 								<div class="col-sm-8">
-									<input value="<?php echo $invoiceValues['order_total_tax']; ?>" type="number" class="form-control" name="taxAmount" id="taxAmount" placeholder="Tax Amount">
+									<input value="<?php echo $invoiceValues['order_total_tax']; ?>" type="number" class="form-control" name="taxAmount" id="taxAmount" placeholder="Total IVA">
 								</div>
 							</div>	
 
@@ -175,14 +174,14 @@ if(!empty($_GET['update_id']) && $_GET['update_id']) {
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label">Cantidad pagada: &nbsp;</label>
 								<div class="col-sm-8">
-									<input value="<?php echo $invoiceValues['order_amount_paid']; ?>" type="number" class="form-control" name="amountPaid" id="amountPaid" placeholder="Amount Paid">
+									<input value="<?php echo $invoiceValues['order_amount_paid']; ?>" type="number" class="form-control" name="amountPaid" id="amountPaid" placeholder="Monto a Pagar">
 								</div>
 							</div>
 							
 							<div class="form-group row">
 								<label class="col-sm-4 col-form-label">Cantidad debida: &nbsp;</label>
 								<div class="col-sm-8">
-									<input value="<?php echo $invoiceValues['order_total_amount_due']; ?>" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Amount Due">
+									<input value="<?php echo $invoiceValues['order_total_amount_due']; ?>" type="number" class="form-control" name="amountDue" id="amountDue" placeholder="Deuda total">
 								</div>
 							</div>
 							<div class="form-group">

@@ -49,17 +49,21 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                 
             <div class="form-row" >
             
-                <div class="form-group col-md-4">
-                    <h4 class="form-group col-md-4">Nombre</h4>
+                <div class="form-group col-md-3">
+                    <h4 class="form-group col-md-3">Nombre</h4>
                     <input type="text" class="form-control" name="companyName" id="companyName" placeholder="Nombre" autocomplete="off" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <h4 class="form-group col-md-4">Celular</h4>
+                <div class="form-group col-md-3">
+                    <h4 class="form-group col-md-3">Celular</h4>
                     <input type="number" class="form-control" name="celular" id="celular" placeholder="Celular" autocomplete="off" required>
                 </div>
-                <div class="form-group col-md-4">
-                    <h4 class="form-group col-md-4">Dirección</h4>
-                    <textarea class="form-control" rows="3" name="address" id="address" placeholder="Su dirección"></textarea>
+                <div class="form-group col-md-3">
+                    <h4 class="form-group col-md-3">Email</h4>
+                    <input type="mail" class="form-control" name="address" id="address" placeholder="Correo electronico" autocomplete="off" required></imput>
+                </div>
+                <div class="form-group col-md-3">
+                    <h4 class="form-group col-md-3">Dirección</h4>
+                    <input class="form-control" rows="1" name="dir_entrega" id="dir_entrega" placeholder="Su dirección"></input>
                 </div>
                 
             </div>
@@ -134,7 +138,7 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
                 <h3>Notas: </h3>
                 <div class="form-group">
-                    <textarea class="form-control txt" rows="5" name="notes" id="notes" placeholder="Notas"></textarea>
+                    <textarea class="form-control txt" rows="8" name="notes" id="notes" placeholder="Notas"></textarea>
                 </div>
                                 
             </div>
@@ -147,10 +151,10 @@ if(!empty($_POST['companyName']) && $_POST['companyName']) {
                     <input type="date" name="fecha_entrega" class="form-control" placeholder="AAAA/MM/DD" >
                 </div>
                 <br>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <h4 class="form-group">Dirección de Entrega</h4>
                     <textarea class="form-control" rows="3" name="dir_entrega" id="dir_entrega" placeholder="Su dirección"></textarea>
-                </div>
+                </div>-->
             </div>
 
             <!--Totales-->

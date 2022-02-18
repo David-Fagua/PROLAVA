@@ -17,13 +17,32 @@
     </h1>
     
     <form role="form" action="factura.php" class="col-md-4" method="post" class="list-group list-group-flush">
+
+      <tbody>
+      <!--<php
+      $host = "localhost"; /* Nombre del servidor */
+      $user = "root"; /* usuario Mysql*/
+      $password = ""; /* Password */
+      $dbname = "datapro"; /* Nombre Base de Datos */
+      $con = mysqli_connect($host, $user, $password,$dbname);
+      // Revisamos la conexion
+      if (!$con) {
+        die("Conexion fallida: " . mysqli_connect_error());
+      }
+
+      “SELECT MAX(id_order) AS id FROM factura_orden”  
+      ?>-->
+      </tbody>
+
+
       <button type="submit" class="btn btn-success" role="button">
-      <img src="../../assets/icon/22.png" width="30" height="30">
-      &nbsp;
-      <a style="color: #ffffff;">
-        Nueva Factura
-      </a>
+        <img src="../../assets/icon/22.png" width="30" height="30">
+        &nbsp;
+        <a style="color: #ffffff;">
+          Nueva Factura
+        </a>
       </button>
+      
     </form>
 
       <div style="height: 480px;width: 1000px; overflow-y: auto; " class="container mt-12">
