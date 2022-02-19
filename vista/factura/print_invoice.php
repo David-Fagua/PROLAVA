@@ -17,6 +17,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	<tr>
 		<td colspan="2" align="center">
 			<b style="font-size:65Spx">LAVASECO CUNDINAMARCA</b><br/> 
+			<b style="font-size:80Spx">EXPRESS</b><br/> 
 			<b style="font-size:35Spx">Cels. 310 278 5726 - 311 555 1523</b><br/>
 			<b style="font-size:35Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b>
 		</td>
