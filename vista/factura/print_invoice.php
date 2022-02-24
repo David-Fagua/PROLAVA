@@ -14,12 +14,23 @@ $output = '';
 
 $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//NOMBRE DE LA EMPRESA
+	
 	<tr>
 		<td colspan="2" align="center">
-			<b style="font-size:65Spx">LAVASECO CUNDINAMARCA</b><br/> 
+			<b style="font-size:65Spx">LAVASECO CUNDINAMARCA</b><br/>
 			<b style="font-size:80Spx">EXPRESS</b><br/> 
-			<b style="font-size:35Spx">Cels. 310 278 5726 - 311 555 1523</b><br/>
-			<b style="font-size:35Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b>
+			<b style="font-size:55Spx">Domicilios 310 278 5726</b><br/>
+		</td>
+		
+	</tr>
+
+	<tr>
+		<td colspan="2" align="center">
+			
+			<b style="font-size:45Spx">Calle 9 #7-24 Barrio Alcaparros Madrid</b><br/>
+			<b style="font-size:40Spx">Telefonos. 311 555 1523 - (o61) 325 0983</b><br/>
+			
+			<b style="font-size:55Spx">Domicilios 310 278 5726</b><br/>
 		</td>
 		
 	</tr>
@@ -98,8 +109,8 @@ $output .= '
 	//Fin
 
 	<tr>
-		<td colspan="2" " style="font-size:30Spx">
-			<b style="font-size:32Spx">Detalles</b><br />'.$invoiceValues['note'].'<br /> 
+		<td colspan="2" " style="font-size:45Spx">
+			<b style="font-size:50Spx">Detalles</b><br />'.$invoiceValues['note'].'<br /> 
 		</td>
 	</tr>';
 	
@@ -108,7 +119,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 	//Fin
 
 	<tr>
-		<td colspan="2"  style="font-size:50Spx">
+		<td colspan="2"  style="font-size:55Spx">
 			
 			Atendido por : <b style="font-size:60Spx">'.$_SESSION['user'].'</b><br />
 			Para entregar: <b style="font-size:60Spx">'.$invoiceValues['fecha_entrega'].'</b><br />
@@ -119,7 +130,7 @@ $output .= '<table width="100%" border="1" cellpadding="5" cellspacing="0">
 
 
 	<tr>
-		<td colspan="2" align="center" style="font-size:30Spx">
+		<td colspan="2" align="center" style="font-size:27Spx">
 			CONTRATO DE SERVICIO ENTRE LA EMPRESA Y EL CLIENTE: Para entregar el trabajo exigimos este recibo. Toda pérdida de ropa causada por casos fortuitos como robo, incendio, etc., Están a riesgos del cliente. Pasados 30 días de la fecha de este recibo cesa la responsabilidad de la Empresa. NO respondemos por dinero, joyas y demás objetos dejados en los vestidos. Debido a la inconsistencia de las telas, paños y colores, no respondemos por encogimientos ni descoloramiento. Toda prenda que sea perdida o cambiada se responderá por diez (10) veces el valor de su lavado.
 			Articulo 2057 del C.C. y Resol. 1035 de la S.I.C. La aceptación de este recibo da por aceptadas las condiciones de la Empresa.
 
