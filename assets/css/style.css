@@ -245,21 +245,5 @@ margin: 0;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300);
 
-tr {
-  display: block;
-  overflow: hidden;
-}
-tbody {
-  display: block;
-  height: calc(60vh - 1px);
-  min-height: calc(200px + 1 px);
-  /*use calc for fixed ie9 & <*/
-  overflow-Y: scroll;
-}
 
-
-th, td {
-  width: 14%;
-  float:left;
-}
 
