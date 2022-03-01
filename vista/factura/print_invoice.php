@@ -86,17 +86,17 @@ foreach($invoiceItems as $invoiceItem){
 
 $output .= '
 	<tr>
-	<td align="right" colspan="3"><b>Sub Total</b></td>
+	<td align="right" colspan="3"><b>TOTAL</b></td>
 	<td align="left"><b>'.$invoiceValues['order_total_before_tax'].'</b></td>
 	</tr>
 
 	<tr>
-	<td align="right" colspan="3">Monto Pagado:</td>
+	<td align="right" colspan="3">ABONO:</td>
 	<td align="left">'.$invoiceValues['order_amount_paid'].'</td>
 	</tr>
 
 	<tr>
-	<td align="right" colspan="3"><b>PENDIENTE CANCELAR:</b></td>
+	<td align="right" colspan="3"><b>SALDO:</b></td>
 	<td align="left"><b>'.$invoiceValues['order_total_amount_due'].'</b></td>
 	</tr>
 	

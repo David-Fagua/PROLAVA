@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2022 a las 15:54:45
+-- Tiempo de generación: 01-03-2022 a las 16:00:02
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -143,7 +143,56 @@ INSERT INTO `factura_orden` (`order_id`, `user_id`, `order_date`, `fecha_entrega
 (10053, 1, '2022-02-23 22:50:03', '0000-00-00', 'MIGUEL ROJAS ', 3174295101, '', '', '4500', '0', '', 4500, '0', '4500', 'PANTALON DE PAÑO NEGRO '),
 (10054, 1, '2022-02-23 22:57:40', '0000-00-00', 'JHON VELAZCO', 3138386968, '', '', '22500', '0', '', 22500, '0', '22500', 'TRAJE DE PAÑO NEGRO PANTALON CORREITA SUELTA, CHALECO, BLEIZER, CAMISA BLANCA CON BOTON A PUNTO DE CAER.\r\n\r\nCAMISA AZUL DESPERCUDIR CUELLOPUÑOS '),
 (10055, 1, '2022-02-23 23:27:57', '2022-02-26', 'LEONARDO GUEVARA ', 3214226046, '', '', '19000', '0', '', 19000, '0', '19000', 'PANTALON VERDE PARA TINTURAR A VERDE '),
-(10056, 1, '2022-02-24 14:37:00', '0000-00-00', 'LUZ NAVARRETE', 3118121669, '', '', '9000', '0', '', 9000, '0', '9000', 'NG TALLA 14, AZ CON QUIEBRE');
+(10056, 1, '2022-02-24 14:37:00', '0000-00-00', 'LUZ NAVARRETE', 3118121669, '', '', '9000', '0', '', 9000, '0', '9000', 'NG TALLA 14, AZ CON QUIEBRE'),
+(10057, 1, '2022-02-24 15:11:56', '0000-00-00', 'JORGE BRAND', 3232221713, '', '', '6300', '0', '', 6300, '0', '6300', 'ARTURO CALLE TALLA L'),
+(10058, 1, '2022-02-24 15:19:23', '0000-00-00', 'JUAN FERNANDEZ', 3002902199, '', '', '4500', '0', '', 4500, '0', '4500', 'NG/BL ZARA MAN'),
+(10059, 1, '2022-02-24 16:19:46', '2022-02-25', 'ALBA CERRANO', 3174143082, '', '', '22500', '0', '', 22500, '0', '22500', 'camisa lila,  camiseta amarilla, blanca de puntos, rosada de rayas, y negra con rojo '),
+(10060, 1, '2022-02-24 16:40:27', '2022-02-25', 'LORENA QUINTERO ', 3142118560, '', '', '4500', '0', '', 4500, '0', '4500', 'CAMISA NEGRA '),
+(10061, 1, '2022-02-24 20:30:37', '2022-02-25', 'FERNAN MAZORCA ', 3112077424, '', '', '11500', '0', '', 11500, '0', '11500', 'CHAQUETA NEGRA ESTAMPADA \r\nPANTALON GRIS NEGRO MANCHAS AMARILLAS '),
+(10062, 1, '2022-02-24 23:47:19', '2022-02-25', 'KEVIN FERNANDEZ ', 3144315175, '', '', '13500', '0', '', 13500, '0', '13500', 'BLEIZER COLEGIAL ROJO '),
+(10063, 1, '2022-02-25 00:00:14', '2022-02-25', 'JHOBN DUARTE ', 3164647798, '', '', '4500', '0', '', 4500, '0', '4500', 'PANTALON DRIL GRIS '),
+(10064, 1, '2022-02-25 14:28:48', '0000-00-00', 'RICARDO THOMAS', 3002896600, '', '', '9000', '0', '', 9000, '0', '9000', 'AZ, NG'),
+(10065, 1, '2022-02-25 16:22:18', '2022-02-26', 'PATRICIA PINEDA ', 3138390317, '', '', '6500', '0', '', 6500, '0', '6500', 'CHAQUETA NEGRA SENCILLA '),
+(10066, 1, '2022-02-25 16:49:21', '2022-02-28', 'EDGAR ACUÑA ', 3125612917, '', '', '46000', '0', '', 46000, '0', '46000', 'EDREDON LILA ROSADO DE FLORES \r\nEDREDON DEGRO CON BEIGE MOTOSO CON PELOS '),
+(10067, 1, '2022-02-25 21:22:56', '2022-02-28', 'URIEL CARRANZA ', 3138154694, '', '', '22000', '0', '', 22000, '0', '22000', 'EDERDON BEIGE CON NEGRO Y GRIS  '),
+(10068, 1, '2022-02-25 21:27:47', '2022-02-26', 'CAROLINA SANTAMARIA ', 3157906847, '', '', '4500', '0', '', 4500, '0', '4500', 'BLAZER COLEGIAL AZUL CON GRIS FALTA BOTON EN MANGA '),
+(10069, 1, '2022-02-25 21:39:46', '0000-00-00', 'DANIELA GUACANEME', 3227454014, '', '', '14700', '0', '', 14700, '0', '14700', 'BUSO DE HILO NEGRO FALTA UNA ROSA HILO SALIDO EN MANGA \r\nBLAZER COLEGIAL \r\nBUSO BEIGE CON MUÑOS NEGROS, MANCHAS DE JUGO DE MORA. '),
+(10070, 1, '2022-02-25 22:24:17', '2022-02-28', 'JAVITEX ', 0, '', '', '10000', '0', '', 10000, '0', '10000', 'COBIJA TERMICA CAFE '),
+(10071, 1, '2022-02-25 22:28:02', '2022-02-26', 'MARIA ZULUAGA ', 3124819092, '', '', '5200', '0', '', 5200, '0', '5200', 'BLEIZER GRIS, BOTON EN MANGA PARTIDO '),
+(10072, 1, '2022-02-25 22:43:02', '2022-02-26', 'ALBA CERRANO ', 3174143082, '', '', '14000', '0', '', 14000, '0', '14000', 'BUSO DE HILO AZUL DE COLEGIO \r\nBLAZER ROJO COLEGIAL \r\nCAMISA BEIGE '),
+(10073, 1, '2022-02-25 23:00:34', '2022-02-26', 'MAICOL BELLO', 3202046371, '', '', '18000', '0', '', 18000, '0', '18000', 'BLAZER AZUL \r\nPANTALON NEGRO \r\nCAMISA LILA \r\n\r\nEXTRA '),
+(10074, 1, '2022-02-25 23:28:33', '2022-02-26', 'VICENTE GAITAN ', 314487127, '', '', '13500', '0', '', 13500, '0', '13500', '2 JENAS AZULES MUY SUCIOS \r\n1 PANTALON DRIL CAFE '),
+(10075, 1, '2022-02-26 13:55:33', '0000-00-00', 'JAVITEX', 3202632809, '', '', '7000', '0', '', 7000, '0', '7000', ''),
+(10076, 1, '2022-02-26 14:47:00', '0000-00-00', 'Oswaldo Rodroguez', 3022832178, '', '', '27400', '0', '', 27400, '0', '27400', '2 corbatas az, vestido gr, ng, camisa az\r\nSOL CRECIENTE 3 511 ANTES DEL MEDIO DIA'),
+(10077, 1, '2022-02-26 15:15:02', '0000-00-00', 'LUZ MARINA RUEDA', 3217977569, '', '', '4500', '0', '', 4500, '0', '4500', 'AZ LEVIS 30-32 DAMA DESHILACHADO'),
+(10078, 1, '2022-02-26 16:14:08', '0000-00-00', 'ANDRES CAICEDO', 3124129532, '', '', '37600', '0', '', 37600, '0', '37600', '2AZ, NG, GRIS\r\n4 CORBATAS 2 NG, GR, V. TINTO'),
+(10079, 1, '2022-02-26 17:15:53', '0000-00-00', 'Angela Lopez', 3165299424, '', '', '23300', '0', '', 23300, '0', '23300', 'busos grises, chaq. vr, blazer ng'),
+(10080, 1, '2022-02-26 17:22:07', '0000-00-00', 'katherine Ramirez', 3162350785, '', '', '19000', '0', '', 19000, '0', '19000', 'jean az osc LEONISA 10'),
+(10081, 1, '2022-02-26 17:24:28', '0000-00-00', 'Rocio Beltran', 3162350785, '', '', '55000', '0', '', 55000, '0', '55000', 'cobijas: az, v.tinto, edredon bg'),
+(10082, 1, '2022-02-26 17:58:48', '0000-00-00', 'Wendy Rojas', 3212153148, '', '', '6500', '0', '', 6500, '6500', '0', 'Blaizer rosado extra amoretti'),
+(10083, 1, '2022-02-26 18:31:15', '0000-00-00', 'Jorge Barragan', 3112315868, '', '', '9000', '0', '', 9000, '0', '9000', ''),
+(10084, 1, '2022-02-26 19:38:38', '2022-02-28', 'Mabel Castro', 3124946655, '', '', '6000', '0', '', 6000, '0', '6000', 'Bleizer negro Duquerre'),
+(10085, 1, '2022-02-26 19:46:51', '2022-02-01', 'Rosa Rodriguez', 3028641908, '', '', '22000', '0', '', 22000, '0', '22000', 'cubrelecho gris rayas naranja tiene una manchas de lavado anterior + dos cojines'),
+(10086, 1, '2022-02-26 20:19:09', '0000-00-00', 'Mateo Perez', 3123226465, '', '', '4500', '0', '', 4500, '0', '4500', 'Bleicer rojo colegial falta un botón'),
+(10087, 1, '2022-02-26 21:11:39', '2022-02-28', 'MAFE LAZARO ', 3214984233, '', '', '13000', '0', '', 13000, '0', '13000', 'chaqueta rosada hilo salido rota \r\nchaqueta azul '),
+(10088, 1, '2022-02-26 22:33:38', '2022-03-01', 'ALEJANDRA VARGAZ', 3118676275, '', '', '22000', '0', '', 22000, '0', '22000', 'EDREDON OVEJERO ROSADO ROTO EN BORDE '),
+(10089, 1, '2022-02-26 22:42:11', '0000-00-00', 'ELKIN AMORTEGUI', 3166196902, '', '', '23000', '0', '', 23000, '0', '23000', 'EDREDON AZUL - BLANCO '),
+(10090, 1, '2022-02-26 23:46:33', '2022-02-28', 'CLEMENTINA', 3122700254, '', '', '9500', '0', '', 9500, '0', '9500', 'BUSO DE HILO CON CREMALLERA \r\n\r\n\r\nPANTALON A CUADROS NEGRO BLANCO '),
+(10091, 1, '2022-02-28 14:55:09', '0000-00-00', 'Joaquin Sanchez', 3213042912, '', '', '18000', '0', '', 18000, '0', '18000', '3 jean 2 az, 1 ng'),
+(10092, 1, '2022-02-28 15:03:31', '0000-00-00', 'Jesus Moreno', 3214619516, '', '', '9000', '0', '', 9000, '0', '9000', 'grises'),
+(10093, 1, '2022-02-28 15:12:46', '0000-00-00', 'Angela Castañeda', 3008907066, '', '', '7500', '0', '', 7500, '0', '7500', 'chaq tipo abrigo ng '),
+(10094, 1, '2022-02-28 18:38:26', '2022-03-01', 'FREDY VEGA ', 3202742134, '', '', '16000', '0', '', 16000, '0', '16000', 'CHAQUETA GRIS JAZPEADA \r\nCHAQUETA GRIS '),
+(10095, 1, '2022-02-28 19:31:52', '2022-03-01', 'GERMAN FALLA ', 3112840706, '', '', '9000', '0', '', 9000, '0', '9000', 'PANTALON DE DRIL NEGRO,  PANATALON DE PAÑO GRIS JAZPEADO '),
+(10096, 1, '2022-02-28 19:37:39', '2022-03-01', 'LUCIA FORERO ', 3132723720, '', '', '4500', '0', '', 4500, '0', '4500', 'BLEIZER COLEGIAL ROJO '),
+(10097, 1, '2022-02-28 19:58:56', '2022-03-01', 'ROSA RODRIGUEZ ', 0, '', '', '6500', '0', '', 6500, '0', '6500', 'CHAQUETA NEGRA CHEIRGNON TLL: L\r\n'),
+(10098, 1, '2022-02-28 20:09:19', '2022-02-28', 'CONJUNTO RESIDENCIAL FONTANA 2', 3194653160, '', '', '1090000', '0', '', 1090000, '0', '1090000', 'CADA TRES PIEZAS EQUIVALEN A UNA PIJAMA.\r\nTOTAL PIEZAS LAVADAS 65\r\n\r\nRUT: 2969648-9 '),
+(10099, 1, '2022-02-28 20:28:45', '2022-03-01', 'MAURICIO LOPEZ ', 3106365889, '', '', '15600', '0', '', 15600, '0', '15600', 'BUSO CAPOTERO AZUL MANCHAS BLANCAS \r\nBUSO CON CREMALLERA MANCHAS ROSADAS \r\nBUSO GRIS CON MANCHA EN FRENTE '),
+(10100, 1, '2022-02-28 20:45:37', '2022-03-01', 'William Bojaca ', 3015758969, '', '', '15500', '0', '', 15500, '0', '15500', 'Camisa rosada manchas y blanca\r\nChaqueta negra'),
+(10101, 1, '2022-02-28 21:12:15', '2022-03-02', 'ROCIO GRACIA ', 3122585818, '', '', '19000', '0', '', 19000, '0', '19000', 'cobija termica gris '),
+(10102, 1, '2022-02-28 23:22:01', '2022-03-01', 'BEATRIZ COLOMBA ', 3133968227, '', '', '13500', '0', '', 13500, '0', '13500', 'pantalon de dril negro \r\nabrigo negro delgado de peluche \r\nchaqueta vino tinto con cordon para plancha '),
+(10103, 1, '2022-03-01 13:41:16', '2022-03-02', 'Nora Rivera', 3133204147, '', '', '9000', '0', '', 9000, '0', '9000', 'Camisa rosada y beish la beish tiene partido el estampado'),
+(10104, 1, '2022-03-01 14:20:41', '2022-03-03', 'Esperanza Cerquera ', 3227968084, '', '', '18000', '0', '', 18000, '0', '18000', 'overol en dril y impermeable'),
+(10105, 1, '2022-03-01 14:39:05', '0000-00-00', 'Joaquin Sanchez', 3213642912, '', '', '4500', '0', '', 4500, '0', '4500', 'levis az');
 
 -- --------------------------------------------------------
 
@@ -251,7 +300,79 @@ INSERT INTO `factura_orden_producto` (`order_item_id`, `order_id`, `item_code`, 
 (106, 10054, 'Lavado', 'Camiseta', '', '1', '4500', '4500'),
 (107, 10054, 'TRAJE COMPLETO', 'LAVADO PLANCHADO ', '', '4', '4500', '18000'),
 (108, 10055, 'Tintura', 'Pantalón', '', '1', '19000', '19000'),
-(109, 10056, 'Lavado', 'Pantalón', '', '2', '4500', '9000');
+(109, 10056, 'Lavado', 'Pantalón', '', '2', '4500', '9000'),
+(110, 10057, 'LAVADO', 'CHAQUETA', '', '1', '6300', '6300'),
+(111, 10058, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(112, 10059, 'Lavado y Planchado ', 'Camiseta', '', '5', '4500', '22500'),
+(113, 10060, 'Lavado', 'Camiseta', '', '1', '4500', '4500'),
+(114, 10061, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(115, 10061, 'CHAQUETA', 'LAVADO ', '', '1', '7000', '7000'),
+(116, 10062, 'Lavado', 'Camiseta', '', '0', '0', '0'),
+(117, 10062, 'BLAZER ', 'LAVADO ', '', '3', '4500', '13500'),
+(118, 10063, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(119, 10064, 'Lavado', 'Pantalón', '', '2', '4500', '9000'),
+(120, 10065, 'Lavado', 'Chaqueta', '', '1', '6500', '6500'),
+(121, 10066, 'Lavado', ' CUBRELECHOS', '', '2', '23000', '46000'),
+(122, 10067, 'Lavado', ' CUBRELECHOS', '', '1', '22000', '22000'),
+(123, 10068, 'Lavado', 'Camiseta', '', '0', '0', '0'),
+(124, 10068, 'BLAZER ', 'LAVADO ', '', '1', '4500', '4500'),
+(128, 10070, 'Lavado', ' COBIJA TERMICA ', '', '1', '10000', '10000'),
+(129, 10071, 'Lavado', ' BEIZER ', '', '1', '5200', '5200'),
+(130, 10069, 'Lavado', ' BUSO HILO ', '', '1', '5000', '5000'),
+(131, 10069, 'BLAZER ', 'LAVADO ', '', '1', '4500', '4500'),
+(132, 10069, 'BUSO CON MOÑOS ', 'LAVADO ', '', '1', '5200', '5200'),
+(133, 10072, 'Lavado', ' BUSO HILO ', '', '1', '5000', '5000'),
+(134, 10072, 'BLAZER ', 'LAVADO', '', '1', '4500', '4500'),
+(135, 10072, 'CAMISA', 'LAVADO', '', '1', '4500', '4500'),
+(136, 10073, 'Lavado', 'Camiseta', '', '1', '6000', '6000'),
+(137, 10073, 'BLAZER', 'LAVADO ', '', '1', '6000', '6000'),
+(138, 10073, 'PANTALON ', 'LAVADO ', '', '1', '6000', '6000'),
+(139, 10074, 'Lavado', 'Pantalón', '', '3', '4500', '13500'),
+(140, 10075, 'Jardinera', 'lavado prensado', '', '1', '3000', '3000'),
+(141, 10075, 'Lavado', 'Blazer', '', '1', '2000', '2000'),
+(142, 10075, 'Prensado', 'Mantel', '', '1', '2000', '2000'),
+(143, 10076, 'Lavado', 'Camisa', '', '1', '6000', '6000'),
+(144, 10076, 'lavado', 'vestido', '', '1', '12000', '12000'),
+(145, 10076, 'lavado ', 'vestido', '', '1', '9400', '9400'),
+(146, 10077, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(147, 10078, 'LAVADO', 'VESTIDOS', '', '4', '9400', '37600'),
+(149, 10079, 'Lavado', 'Buso ', '', '2', '5800', '11600'),
+(150, 10079, 'chaqueta', 'lavado', '', '1', '6700', '6700'),
+(151, 10079, 'blazer', 'lavado', '', '1', '5000', '5000'),
+(152, 10080, 'Tintura', 'Pantalón', '', '1', '19000', '19000'),
+(153, 10081, 'Lavado', ' CUBRELECHOS', '', '1', '19000', '19000'),
+(154, 10081, 'lavado', 'Cobijas', '', '2', '18000', '36000'),
+(157, 10082, 'Lavado', 'blazer Extra', '', '1', '6500', '6500'),
+(158, 10083, 'Lavado', 'Camisa', '', '1', '4500', '4500'),
+(159, 10083, 'pantalon ', 'lavado', '', '1', '4500', '4500'),
+(160, 10084, 'Lavado', ' BEIZER ', '', '1', '6000', '6000'),
+(161, 10085, 'Lavado', ' CUBRELECHOS', '', '1', '22000', '22000'),
+(163, 10086, 'Lavado', ' BEIZER ', '', '1', '4500', '4500'),
+(164, 10087, 'Lavado', 'Chaqueta', '', '2', '6500', '13000'),
+(165, 10088, 'Lavado', ' CUBRELECHOS', '', '1', '22000', '22000'),
+(167, 10089, 'Lavado', 'EDREDON', '', '1', '23000', '23000'),
+(168, 10090, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(169, 10090, 'BUSO HILO ', 'LAVADO ', '', '1', '5000', '5000'),
+(170, 10091, 'Lavado', 'Pantalón', '', '4', '4500', '18000'),
+(171, 10092, 'Lavado', 'Pantalón', '', '2', '4500', '9000'),
+(172, 10093, 'Lavado', 'Chaqueta', '', '1', '7500', '7500'),
+(173, 10094, 'Lavado', 'Chaqueta', '', '2', '8000', '16000'),
+(174, 10095, 'Lavado', 'Pantalón', '', '2', '4500', '9000'),
+(175, 10096, 'Lavado', ' BEIZER ', '', '1', '4500', '4500'),
+(176, 10097, 'Lavado', 'Chaqueta', '', '1', '6500', '6500'),
+(177, 10098, 'LAVADO', 'PIJAMAS ASCENSOR', '', '13', '50000', '650000'),
+(178, 10098, 'LAVADO', 'PIJAMAS ASENSOR', '', '8', '55000', '440000'),
+(179, 10099, 'Lavado', ' BUSO ', '', '3', '5200', '15600'),
+(180, 10100, 'Lavado', 'Chaqueta', '', '1', '6500', '6500'),
+(181, 10100, 'Camisa', 'Lavedo', '', '2', '4500', '9000'),
+(182, 10101, 'Lavado', ' COBIJA TERMICA ', '', '1', '19000', '19000'),
+(183, 10102, 'Lavado', 'Pantalón', '', '1', '4500', '4500'),
+(184, 10102, 'ABRIGO ', 'LAVADO ', '', '1', '6500', '6500'),
+(185, 10102, 'CHAQUETA ', 'PLANCHADO ', '', '1', '2500', '2500'),
+(186, 10103, 'Lavado', 'Camiseta', '', '2', '4500', '9000'),
+(187, 10104, 'Lavado', ' OVEROL', '', '1', '10000', '10000'),
+(188, 10104, 'OVEROL', 'Lavado', '', '1', '8000', '8000'),
+(189, 10105, 'Lavado', 'Pantalón', '', '1', '4500', '4500');
 
 -- --------------------------------------------------------
 
@@ -326,7 +447,9 @@ INSERT INTO `productos` (`id`, `prenda`) VALUES
 (16, ' CHAQUETA CUERINA '),
 (17, ' CHAQUETA DE MOTO'),
 (18, ' BUSO HILO '),
-(19, ' BEIZER ');
+(19, ' BEIZER '),
+(20, ' BUSO '),
+(21, ' BUSO CAPOTERO ');
 
 -- --------------------------------------------------------
 
@@ -449,13 +572,13 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT de la tabla `factura_orden`
 --
 ALTER TABLE `factura_orden`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10057;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10106;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_orden_producto`
 --
 ALTER TABLE `factura_orden_producto`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
 
 --
 -- AUTO_INCREMENT de la tabla `factura_usuarios`
@@ -473,7 +596,7 @@ ALTER TABLE `precio`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
