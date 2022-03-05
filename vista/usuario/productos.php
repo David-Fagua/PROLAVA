@@ -14,13 +14,11 @@
 <title>FACTURA</title>
 
 
-<?php include '../partials/headA.php';?>
+<?php include '../partials/headU.php';?>
 
-<?php include '../partials/menuA.php';?>
+<?php include '../partials/menuU.php';?>
 
-<br></br>
-
-<div id="page-wrapper">
+</main>
 
 </--formulario--/>
 
@@ -74,7 +72,7 @@
         </div>  
 </div>
 
-</div>
+</main>
 
 
-<?php include '../partials/footerA.php';?>
+<?php include '../partials/footerU.php';?>

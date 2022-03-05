@@ -18,11 +18,7 @@
 
 <?php include '../partials/menuU.php';?>
 
-<br></br>
-
-<div id="page-wrapper">
-
-  <!--info--> 
+<main>
 
   </--formulario--/>
 
@@ -31,7 +27,7 @@
                   
     <div class="row">
       <form role="form" action="clientes.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+        <button href="clientes.php" type="submit" class="btn btn-dark" role="button">
         <img src="../../assets/icon/3.png" width="40" height="40">
         <a style="color: #ffffff;">
           CLIENTES
@@ -53,7 +49,7 @@
       &nbsp;
 
       <form role="form" action="consultar_f.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+        <button href="consultar_f.php" type="submit" class="btn btn-dark" role="button">
         <img src="../../assets/icon/22.png" width="40" height="40">
         <a style="color: #ffffff;">
           CONSULTAR FACTURAS
@@ -63,11 +59,11 @@
 
       &nbsp;
 
-      <form role="form" action="precios.php" method="post">
-        <button href="login.php" type="submit" class="btn btn-dark" role="button">
+      <form role="form" action="productos.php" method="post">
+        <button href="precios.php" type="submit" class="btn btn-dark" role="button">
         <img src="../../assets/icon/21.png" width="40" height="40">
         <a style="color: #ffffff;">
-          PRECIOS
+          PRODUCTOS
         </a>
         </button>
       </form>
@@ -76,6 +72,6 @@
 
   </div>
 
-</div>
+</main>
 
 <?php include '../partials/footerU.php';?>
