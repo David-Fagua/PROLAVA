@@ -59,7 +59,7 @@
                 </div>
 
 
-                <div style="height: 480px;width: 700px; overflow-y: auto; " class="container mt-9">
+                <div style="height: 480px;width: 800px; overflow-y: auto; " class="container mt-9">
                     <div class="row">
                                 
                         <div class="col-md-12">
@@ -94,7 +94,7 @@
                                             }
                                         ?>
                                 </tbody>
-                            </table>
+                            </table>>
                         </div> 
                     <div class="col-md-1">
                     </div>
