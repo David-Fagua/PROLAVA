@@ -1,8 +1,9 @@
 <!--*********************************************************
-* Sistema de consulta para facturas                         *
+* Sistema PROLAVA                                           *
 *                                                           *
 * Fecha:    2022-01-25                                      *
 * Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
 ************************************************************-->
 
 <!DOCTYPE html>

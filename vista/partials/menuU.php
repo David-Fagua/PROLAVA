@@ -1,3 +1,10 @@
+<!--*********************************************************
+* Sistema PROLAVA                                           *
+*                                                           *
+* Fecha:    2022-01-25                                      *
+* Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
+************************************************************-->
 
 <!--Navbar Superior-->
 <nav class="navbar navbar-light navbar-expand-lg fixed-top" style="background-color: #021E73;">

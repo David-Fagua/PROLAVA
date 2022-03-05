@@ -1,3 +1,11 @@
+<!--*********************************************************
+* Sistema PROLAVA                                           *
+*                                                           *
+* Fecha:    2022-01-25                                      *
+* Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
+************************************************************-->
+
 <ul class="nav navbar-nav">
 <li class="dropdown">
 	<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown">Factura

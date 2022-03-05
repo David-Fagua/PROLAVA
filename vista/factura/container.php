@@ -1,3 +1,11 @@
+<!--*********************************************************
+* Sistema PROLAVA                                           *
+*                                                           *
+* Fecha:    2022-01-25                                      *
+* Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
+************************************************************-->
+
 </head>
 <body class="">
 <div role="navigation" class="navbar navbar-inverse navbar-static-top">

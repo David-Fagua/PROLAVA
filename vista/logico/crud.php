@@ -1,3 +1,11 @@
+<!--*********************************************************
+* Sistema PROLAVA                                           *
+*                                                           *
+* Fecha:    2022-01-25                                      *
+* Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
+************************************************************-->
+
 <?php
 include_once '../bd/conexion.php';
 $objeto = new Conexion();

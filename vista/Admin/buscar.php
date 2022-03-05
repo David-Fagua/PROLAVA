@@ -1,3 +1,10 @@
+<!--*********************************************************
+* Sistema PROLAVA                                           *
+*                                                           *
+* Fecha:    2022-01-25                                      *
+* Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
+************************************************************-->
 
 <?php 
 $mysqli= new mysqli("localhost", "root", "", "datapro");
@@ -8,22 +15,3 @@ if(mysqli_connect_errno())
 }
 $mysqli->set_charset("utf8");
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

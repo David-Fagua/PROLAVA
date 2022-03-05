@@ -1,9 +1,11 @@
 <!--*********************************************************
-* Sistema de consulta para facturas                         *
+* Sistema PROLAVA                                           *
 *                                                           *
-* Fecha:    2022-02-04                                      *
+* Fecha:    2022-01-25                                      *
 * Autor:  David Fagua                                       *
+* Contacto:  fagua99@gmail.com                              *
 ************************************************************-->
+
 <?php 
   session_start();
   include('vista/factura/header.php');
