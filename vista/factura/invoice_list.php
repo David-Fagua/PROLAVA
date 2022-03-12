@@ -21,10 +21,8 @@
     <h1>
     Facturas
     </h1>
-    
-    <form role="form" action="factura.php" class="col-md-4" method="post" class="list-group list-group-flush">
 
-      <tbody>
+    <tbody>
       <!--<php
       $host = "localhost"; /* Nombre del servidor */
       $user = "root"; /* usuario Mysql*/
@@ -38,9 +36,25 @@
 
       “SELECT MAX(id_order) AS id FROM factura_orden”  
       ?>-->
-      </tbody>
+    </tbody>
+    
+    <form role="form" action="buscador.php" class="col-md-8" method="post" class="list-group list-group-flush">
 
+      <button type="submit" class="btn btn-primary" role="button">
+        <img src="../../assets/icon/busca.png" width="30" height="30">
+        &nbsp;
+        <a style="color: #ffffff;">
+          Buscar Factura
+        </a>
+      </button>
+      
+    </form>
 
+    <!--&nbsp;-->
+
+    <form role="form" action="factura.php" class="col-md-8" method="post" class="list-group list-group-flush">
+
+      
       <button type="submit" class="btn btn-success" role="button">
         <img src="../../assets/icon/22.png" width="30" height="30">
         &nbsp;

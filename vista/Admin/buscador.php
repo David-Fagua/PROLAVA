@@ -33,7 +33,7 @@
     
     <div class="form-group col-md-12">
       <div>
-        <button class="btn btn-outline-success my-2 my-sm-0" href="#">Buscar <i class="fas fa-search"></i></button>
+        <button class="btn btn-primary" href="#">Buscar <i class="fas fa-search"></i></button>
         <input class="form-group col-md-6" type="text" name="termino" id="termino" placeholder="Digite el nombre del producto que desea buscar..." aria-label="Search">
       </div>	
       <div style="height: 480px;width: 1000px; overflow-y: auto;" id="tabla_resultados">

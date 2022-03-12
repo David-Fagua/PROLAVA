@@ -38,7 +38,7 @@ if($consultaBD->num_rows>=1){
 				<td>".$fila['order_id']."</td>
 				<td> ".$fila['order_receiver_name']."</td>
 				<td>$ ".$fila['order_total_after_tax']."</td>
-				<td> <button >Imprimir </button></td>
+				<!--<td> <button >Imprimir </button></td>-->
 			</tr>";
 		}
 		echo "</tbody>
