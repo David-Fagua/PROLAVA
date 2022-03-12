@@ -14,7 +14,7 @@
 		
 	</div>
 	<div class="col-12 col-md">
-		<small class="d-block mb-3 text-center text-muted">PROLAVA 1.0.3</small>
+		<small class="d-block mb-3 text-center text-muted">PROLAVA 1.0.5</small>
       	<small class="d-block mb-3 text-center text-muted">Copyright &copy; 2022 David Fagua</small>
 	  
     </div>
